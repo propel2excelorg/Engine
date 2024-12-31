@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "config/*",
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "build": "turbo run build --cache-dir=.turbo",
+    "db:migrate": "yarn workspace @engine/db migrate",
+    "db:migrate:down": "yarn workspace @engine/db migrate:down",
+    "db:migration:create": "yarn workspace @engine/db migration:create",
+    "db:seed": "yarn workspace @engine/db seed",
+    "db:types": "yarn workspace @engine/db types",
+    "dev": "turbo run dev --cache-dir=.turbo",
+    "dev:apps": "yarn dev --filter=./apps/*",
+    "dx:down": "docker compose down",
+    "dx:nuke": "docker compose down --volumes --remove-orphans",
+    "dx:up": "docker compose up -d",
+    "env:setup": "yarn workspace @engine/scripts env:setup",
+    "lint": "turbo run lint --cache-dir=.turbo",
+    "lint:fix": "turbo run lint:fix --cache-dir=.turbo",
+    "prisma:setup": "yarn workspace @engine/scripts prisma:setup",
+    "prisma:studio": "yarn workspace @engine/db prisma:studio",
+    "start": "turbo run start --cache-dir=.turbo",
+    "test": "turbo run test --cache-dir=.turbo",
+    "type-check": "turbo run type-check --cache-dir=.turbo"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "turbo": "latest",
+    "typescript": "^5.4.2"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": "^20.0.0"
+  },
+  "packageManager": "yarn@1.22.10"
+}
