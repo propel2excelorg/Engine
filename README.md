@@ -110,8 +110,4 @@ Please see our [contributing guide](./CONTRIBUTING.md)! 👋
 
 A heartfelt thanks to our Propel2Excel members for their contributions! 🙏
 
-<a href="https://github.com/Propel2Excelorg/engine/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Propel2Excelorg/engine" />
-</a>
 
-Made with [contrib.rocks](https://contrib.rocks).
