@@ -5,13 +5,13 @@ import React, { type PropsWithChildren, useState } from 'react';
 import { CheckCircle, ChevronDown, ChevronUp, XCircle } from 'react-feather';
 import { match } from 'ts-pattern';
 
-import { db } from '@oyster/db';
+import { db } from '@engine/db';
 import {
   ACTIVATION_REQUIREMENTS,
   type ActivationRequirement,
-} from '@oyster/types';
-import { Modal, Pill, Text } from '@oyster/ui';
-import { run } from '@oyster/utils';
+} from '@engine/types';
+import { Modal, Pill, Text } from '@engine/ui';
+import { run } from '@engine/utils';
 
 import { Route } from '@/shared/constants';
 import { getTimezone } from '@/shared/cookies.server';
@@ -137,8 +137,8 @@ function ClaimedState() {
         You claimed your swag pack on{' '}
         <span className="font-semibold">{claimedSwagPackAt}</span>. If you're
         interested in purchasing more swag, check out the official{' '}
-        <Link className="link" target="_blank" to="https://colorstackmerch.org">
-          ColorStack Merch Store
+        <Link className="link" target="_blank" to="https://Propel2Excelmerch.org">
+          Propel2Excel Merch Store
         </Link>
         !
       </Text>
@@ -153,7 +153,7 @@ function IneligibleState() {
 
   return (
     <Text color="gray-500">
-      ColorStack launched the activation flow for members who joined after June
+      Propel2Excel launched the activation flow for members who joined after June
       9th, 2023. You joined on{' '}
       <span className="font-semibold">{acceptedAt}</span>, so unfortunately the
       activation flow does not apply to you and you are not eligible to claim a
@@ -190,7 +190,7 @@ function ActivationList() {
     <Link
       className="link"
       target="_blank"
-      to="https://calendly.com/colorstack-onboarding-ambassador/onboarding"
+      to="https://calendly.com/Propel2Excel-onboarding-ambassador/onboarding"
     >
       onboarding session
     </Link>
@@ -225,7 +225,7 @@ function ActivationList() {
             answer={
               <>
                 It is likely that you joined the event with an email address
-                that is not on your ColorStack account, so we couldn't associate
+                that is not on your Propel2Excel account, so we couldn't associate
                 the attendance with you. Please add that email to your account{' '}
                 {emailLink}, then it should update!
               </>
@@ -239,7 +239,7 @@ function ActivationList() {
         requirement="attend_onboarding"
       >
         <ActivationItem.Description>
-          Attend an {onboardingLink} to learn more about ColorStack and meet
+          Attend an {onboardingLink} to learn more about Propel2Excel and meet
           other members!
         </ActivationItem.Description>
 
@@ -258,7 +258,7 @@ function ActivationList() {
             <Link
               className="link hover:font-semibold"
               target="_blank"
-              to="https://colorstack-family.slack.com/channels/C0120DK0Y9E"
+              to="https://Propel2Excel-family.slack.com/channels/C0120DK0Y9E"
             >
               #introductions
             </Link>
@@ -279,7 +279,7 @@ function ActivationList() {
             <Link
               className="link hover:font-semibold"
               target="_blank"
-              to="https://colorstack-family.slack.com/channels/C011H0EFLMU"
+              to="https://Propel2Excel-family.slack.com/channels/C011H0EFLMU"
             >
               #announcements
             </Link>
@@ -306,7 +306,7 @@ function ActivationList() {
       >
         <ActivationItem.Description>
           We highly value engagement and helping others in the community! Reply
-          to 2 threads in ANY channel that other ColorStack members have posted.
+          to 2 threads in ANY channel that other Propel2Excel members have posted.
         </ActivationItem.Description>
       </ActivationItem>
     </ul>

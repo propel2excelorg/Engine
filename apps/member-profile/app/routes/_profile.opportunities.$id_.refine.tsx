@@ -19,7 +19,7 @@ import {
   getLinkFromOpportunity,
   refineOpportunity,
   RefineOpportunityInput,
-} from '@oyster/core/opportunities';
+} from '@engine/core/opportunities';
 import {
   Button,
   ErrorMessage,
@@ -28,7 +28,7 @@ import {
   Modal,
   Textarea,
   validateForm,
-} from '@oyster/ui';
+} from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 import { ensureUserAuthenticated } from '@/shared/session.server';

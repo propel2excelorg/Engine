@@ -2,8 +2,8 @@ import { json, type LoaderFunctionArgs } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import { ExternalLink } from 'react-feather';
 
-import { Pill, Text } from '@oyster/ui';
-import { run } from '@oyster/utils';
+import { Pill, Text } from '@engine/ui';
+import { run } from '@engine/utils';
 
 import {
   ProfileHeader,
@@ -54,10 +54,10 @@ export default function IntegrationsPage() {
               the{' '}
               <a
                 className="link"
-                href="https://github.com/colorstackorg/oyster"
+                href="https://github.com/Propel2Excelorg/engine"
                 target="_blank"
               >
-                Oyster codebase
+                engine codebase
               </a>
               .
             </>

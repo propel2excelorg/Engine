@@ -1,5 +1,5 @@
-import { db } from '@oyster/db';
-import { id } from '@oyster/utils';
+import { db } from '@engine/db';
+import { id } from '@engine/utils';
 
 import { job } from '@/infrastructure/bull';
 import { saveCompanyIfNecessary } from './save-company-if-necessary';

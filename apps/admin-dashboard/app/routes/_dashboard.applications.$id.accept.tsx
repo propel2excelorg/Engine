@@ -6,8 +6,8 @@ import {
 } from '@remix-run/node';
 import { Form, useActionData, useLoaderData } from '@remix-run/react';
 
-import { acceptApplication, getApplication } from '@oyster/core/applications';
-import { Button, ErrorMessage, Modal } from '@oyster/ui';
+import { acceptApplication, getApplication } from '@engine/core/applications';
+import { Button, ErrorMessage, Modal } from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 import {

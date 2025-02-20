@@ -64,7 +64,7 @@ export async function createGoodyOrder(
         },
       ],
     },
-    from_name: 'The ColorStack Community Team',
+    from_name: 'The Propel2Excel Community Team',
     message: input.message,
     recipients: input.recipients,
     send_method: 'email_and_link',

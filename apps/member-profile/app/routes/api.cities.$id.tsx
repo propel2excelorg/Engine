@@ -1,6 +1,6 @@
 import { json, type LoaderFunctionArgs } from '@remix-run/node';
 
-import { getCityDetails } from '@oyster/core/location';
+import { getCityDetails } from '@engine/core/location';
 
 import { ensureUserAuthenticated } from '@/shared/session.server';
 

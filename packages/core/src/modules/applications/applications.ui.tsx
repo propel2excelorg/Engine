@@ -10,7 +10,7 @@ import {
   Major,
   type OtherDemographic,
   type Race,
-} from '@oyster/types';
+} from '@engine/types';
 import {
   Checkbox,
   Field,
@@ -21,8 +21,8 @@ import {
   Text,
   Textarea,
   type TextProps,
-} from '@oyster/ui';
-import { run, toTitleCase } from '@oyster/utils';
+} from '@engine/ui';
+import { run, toTitleCase } from '@engine/utils';
 
 import {
   type EducationLevel,
@@ -226,7 +226,7 @@ Application.GoalsField = function GoalsField({
   return (
     <Field
       error={error}
-      label="What are your short and long-term goals? Name 1 thing ColorStack can do to help you achieve them."
+      label="What are your short and long-term goals? Name 1 thing Propel2Excel can do to help you achieve them."
       labelFor={name}
       required
     >

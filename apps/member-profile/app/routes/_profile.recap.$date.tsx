@@ -10,13 +10,13 @@ import {
 import dayjs from 'dayjs';
 import { type PropsWithChildren } from 'react';
 
-import { listCompanyReviews } from '@oyster/core/employment/server';
-import { listMembersInDirectory } from '@oyster/core/member-profile/server';
-import { track } from '@oyster/core/mixpanel';
-import { listResources } from '@oyster/core/resources/server';
-import { listSlackMessages } from '@oyster/core/slack/server';
-import { Divider, Text } from '@oyster/ui';
-import { run } from '@oyster/utils';
+import { listCompanyReviews } from '@engine/core/employment/server';
+import { listMembersInDirectory } from '@engine/core/member-profile/server';
+import { track } from '@engine/core/mixpanel';
+import { listResources } from '@engine/core/resources/server';
+import { listSlackMessages } from '@engine/core/slack/server';
+import { Divider, Text } from '@engine/ui';
+import { run } from '@engine/utils';
 
 import { NavigationItem } from '@/shared/components/navigation';
 import { type Route } from '@/shared/constants';
@@ -112,7 +112,7 @@ export async function loader({ params, request }: LoaderFunctionArgs) {
 
   track({
     event: 'Page Viewed',
-    properties: { Page: 'Last Week in ColorStack' },
+    properties: { Page: 'Last Week in Propel2Excel' },
     request,
     user: user(session),
   });
@@ -147,7 +147,7 @@ export default function WeekInReviewLayout() {
   return (
     <section className="mx-auto flex w-full max-w-[36rem] flex-col gap-4 @container">
       <header>
-        <Text variant="2xl">Last Week in ColorStack</Text>
+        <Text variant="2xl">Last Week in Propel2Excel</Text>
         <Text color="gray-500">{dateRange}</Text>
       </header>
 

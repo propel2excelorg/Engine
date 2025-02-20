@@ -17,9 +17,9 @@ import { FileText, Layers, Plus, Star, Users } from 'react-feather';
 import {
   ListCompaniesOrderBy,
   ListCompaniesWhere,
-} from '@oyster/core/employment';
-import { listCompanies } from '@oyster/core/employment/server';
-import { track } from '@oyster/core/mixpanel';
+} from '@engine/core/employment';
+import { listCompanies } from '@engine/core/employment/server';
+import { track } from '@engine/core/mixpanel';
 import {
   Button,
   cx,
@@ -29,13 +29,13 @@ import {
   Pagination,
   Select,
   Text,
-} from '@oyster/ui';
+} from '@engine/ui';
 import {
   Tooltip,
   TooltipContent,
   TooltipText,
   TooltipTrigger,
-} from '@oyster/ui/tooltip';
+} from '@engine/ui/tooltip';
 
 import { Route } from '@/shared/constants';
 import { ensureUserAuthenticated, user } from '@/shared/session.server';
@@ -145,7 +145,7 @@ function SortCompaniesForm() {
         width="fit"
       >
         <option value={sortKeys.most_employees}>
-          Most ColorStack Employees
+          Most Propel2Excel Employees
         </option>
         <option value={sortKeys.highest_rated}>Highest Rated</option>
         <option value={sortKeys.most_reviews}>Most Reviews</option>

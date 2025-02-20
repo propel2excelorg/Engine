@@ -12,9 +12,9 @@ import {
 import dayjs from 'dayjs';
 import { DollarSign, MapPin } from 'react-feather';
 
-import { track } from '@oyster/core/mixpanel';
-import { db } from '@oyster/db';
-import { Pagination, Table, type TableColumnProps, Text } from '@oyster/ui';
+import { track } from '@engine/core/mixpanel';
+import { db } from '@engine/db';
+import { Pagination, Table, type TableColumnProps, Text } from '@engine/ui';
 import {
   ClearFiltersButton,
   FilterButton,
@@ -25,7 +25,7 @@ import {
   FilterSearch,
   type FilterValue,
   useFilterContext,
-} from '@oyster/ui/filter';
+} from '@engine/ui/filter';
 
 import { CompanyColumn, CompanyFilter } from '@/shared/components';
 import {

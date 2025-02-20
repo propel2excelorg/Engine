@@ -16,15 +16,15 @@ import { Filter, Plus } from 'react-feather';
 import { match } from 'ts-pattern';
 import { type z } from 'zod';
 
-import { SchoolCombobox } from '@oyster/core/education/ui';
-import { CityCombobox } from '@oyster/core/location/ui';
-import { listMembersInDirectory } from '@oyster/core/member-profile/server';
+import { SchoolCombobox } from '@engine/core/education/ui';
+import { CityCombobox } from '@engine/core/location/ui';
+import { listMembersInDirectory } from '@engine/core/member-profile/server';
 import {
   ListMembersInDirectoryWhere,
   ListSearchParams,
-} from '@oyster/core/member-profile/ui';
-import { db } from '@oyster/db';
-import { type ExtractValue, ISO8601Date } from '@oyster/types';
+} from '@engine/core/member-profile/ui';
+import { db } from '@engine/db';
+import { type ExtractValue, ISO8601Date } from '@engine/types';
 import {
   Button,
   Dashboard,
@@ -36,8 +36,8 @@ import {
   Select,
   Text,
   useSearchParams,
-} from '@oyster/ui';
-import { run, toTitleCase } from '@oyster/utils';
+} from '@engine/ui';
+import { run, toTitleCase } from '@engine/utils';
 
 import { CompanyCombobox } from '@/shared/components/company-combobox';
 import { EthnicityCombobox } from '@/shared/components/ethnicity-combobox';

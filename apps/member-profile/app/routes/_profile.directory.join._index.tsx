@@ -2,7 +2,7 @@ import { json, type LoaderFunctionArgs } from '@remix-run/node';
 import { Link } from '@remix-run/react';
 import { ArrowRight } from 'react-feather';
 
-import { Button, Modal } from '@oyster/ui';
+import { Button, Modal } from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 import { ensureUserAuthenticated } from '@/shared/session.server';
@@ -18,7 +18,7 @@ export default function JoinDirectoryIntroduction() {
     <>
       <Modal.Description>
         The Member Directory is the best way to find and connect with other
-        ColorStack members. By joining, you'll be able to filter for members by
+        Propel2Excel members. By joining, you'll be able to filter for members by
         school, location, where they work and more. To get started, we'll just
         need a few more details about you.
       </Modal.Description>

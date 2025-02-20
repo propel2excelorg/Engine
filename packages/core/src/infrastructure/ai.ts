@@ -1,7 +1,7 @@
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { ColorStackError } from '@/shared/errors';
+import { Propel2ExcelError } from '@/shared/errors';
 import { fail, type Result, success } from '@/shared/utils/core';
 import { RateLimiter } from '@/shared/utils/rate-limiter';
 
@@ -90,7 +90,7 @@ export async function createEmbedding(
   const json = await response.json();
 
   if (!response.ok) {
-    const error = new ColorStackError()
+    const error = new Propel2ExcelError()
       .withMessage('Failed to create embedding with OpenAI.')
       .withContext({ ...json, status: response.status })
       .report();
@@ -239,7 +239,7 @@ export async function getChatCompletion({
         return 'Failed to fetch chat completion from Anthropic.';
       });
 
-    const error = new ColorStackError()
+    const error = new Propel2ExcelError()
       .withMessage(message)
       .withContext({ json, status: response.status })
       .report();
@@ -317,7 +317,7 @@ export async function rerankDocuments(
   const json = await response.json();
 
   if (!response.ok) {
-    const error = new ColorStackError()
+    const error = new Propel2ExcelError()
       .withMessage('Failed to rerank documents with Cohere.')
       .withContext({ ...json, status: response.status })
       .report();

@@ -1,8 +1,8 @@
 import { json } from '@remix-run/node';
 import { Outlet, useLoaderData } from '@remix-run/react';
 
-import { isFeatureFlagEnabled } from '@oyster/core/member-profile/server';
-import { Public, Text } from '@oyster/ui';
+import { isFeatureFlagEnabled } from '@engine/core/member-profile/server';
+import { Public, Text } from '@engine/ui';
 
 export async function loader() {
   const isApplicationOpen = await isFeatureFlagEnabled('family_application');
@@ -18,14 +18,14 @@ export default function ApplicationLayout() {
   return (
     <Public.Content layout="lg">
       <img
-        alt="ColorStack Workmark"
+        alt="Propel2Excel Workmark"
         height={30}
         width={200}
-        src="/images/colorstack-wordmark.png"
+        src="/images/Propel2Excel-wordmark.png"
       />
 
       <Text className="mt-8" variant="2xl">
-        The ColorStack Family Application
+        The Propel2Excel Family Application
       </Text>
 
       {isApplicationOpen ? (
@@ -34,7 +34,7 @@ export default function ApplicationLayout() {
         <Text>
           Unfortunately, our application is temporarily closed as we review
           exising applications. Please check back in the upcoming days/weeks for
-          the opportunity to apply to ColorStack!
+          the opportunity to apply to Propel2Excel!
         </Text>
       )}
     </Public.Content>

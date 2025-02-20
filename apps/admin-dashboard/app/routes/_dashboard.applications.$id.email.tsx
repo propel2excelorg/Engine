@@ -10,8 +10,8 @@ import { type z } from 'zod';
 import {
   getApplication,
   updateEmailApplication,
-} from '@oyster/core/applications';
-import { Application } from '@oyster/types';
+} from '@engine/core/applications';
+import { Application } from '@engine/types';
 import {
   Button,
   ErrorMessage,
@@ -20,7 +20,7 @@ import {
   Input,
   Modal,
   validateForm,
-} from '@oyster/ui';
+} from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 import {

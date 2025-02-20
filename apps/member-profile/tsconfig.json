@@ -1,5 +1,5 @@
 {
-  "extends": "@oyster/tsconfig/remix.json",
+  "extends": "@engine/tsconfig/remix.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

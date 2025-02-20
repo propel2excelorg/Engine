@@ -2,9 +2,9 @@ import { json, type LoaderFunctionArgs } from '@remix-run/node';
 import { generatePath, useLoaderData, useSearchParams } from '@remix-run/react';
 import dayjs from 'dayjs';
 
-import { track } from '@oyster/core/mixpanel';
-import { db } from '@oyster/db';
-import { Divider, Modal } from '@oyster/ui';
+import { track } from '@engine/core/mixpanel';
+import { db } from '@engine/db';
+import { Divider, Modal } from '@engine/ui';
 
 import { CompanyLink } from '@/shared/components';
 import {

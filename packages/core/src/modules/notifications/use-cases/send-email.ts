@@ -14,7 +14,7 @@ import {
   StudentAnniversaryEmail,
   StudentAttendedOnboardingEmail,
   StudentRemovedEmail,
-} from '@oyster/email-templates';
+} from '@engine/email-templates';
 
 import { getObject } from '@/infrastructure/s3';
 import { ENVIRONMENT } from '@/shared/env';
@@ -25,8 +25,8 @@ import {
 
 // Constants
 
-const FROM_JEHRON = 'Jehron Petty <jehron@colorstack.org>';
-const FROM_NOTIFICATIONS = 'ColorStack <notifications@colorstack.org>';
+const FROM_JEHRON = 'Jehron Petty <jehron@Propel2Excel.org>';
+const FROM_NOTIFICATIONS = 'Propel2Excel <notifications@Propel2Excel.org>';
 
 // Functions
 
@@ -91,7 +91,7 @@ async function sendEmailWithPostmark(input: EmailTemplate) {
     }),
     From: from,
     HtmlBody: getHtml(input),
-    ReplyTo: 'membership@colorstack.org',
+    ReplyTo: 'membership@Propel2Excel.org',
     Subject: getSubject(input),
     To: input.to,
   });
@@ -168,13 +168,13 @@ function getHtml(input: EmailTemplate): string {
 function getSubject(input: EmailTemplate): string {
   const subject = match(input)
     .with({ name: 'application-accepted' }, () => {
-      return 'ColorStack Onboarding + Slack Invitation';
+      return 'Propel2Excel Onboarding + Slack Invitation';
     })
     .with({ name: 'application-created' }, () => {
-      return 'Thank You for Applying to ColorStack';
+      return 'Thank You for Applying to Propel2Excel';
     })
     .with({ name: 'application-rejected' }, () => {
-      return 'Your ColorStack Application';
+      return 'Your Propel2Excel Application';
     })
     .with({ name: 'one-time-code-sent' }, ({ data }) => {
       return `Your One-Time Code is ${data.code}`;
@@ -186,7 +186,7 @@ function getSubject(input: EmailTemplate): string {
       return 'Your Referral Was Accepted!';
     })
     .with({ name: 'referral-sent' }, () => {
-      return "You've Been Referred to Join ColorStack!";
+      return "You've Been Referred to Join Propel2Excel!";
     })
     .with({ name: 'resume-submitted' }, ({ data }) => {
       return `Confirmation: ${data.resumeBookName} Resume Book! ✅`;
@@ -198,7 +198,7 @@ function getSubject(input: EmailTemplate): string {
       return "Onboarding Session, ✅! What's Next?";
     })
     .with({ name: 'student-removed' }, () => {
-      return 'An Update on Your ColorStack Membership';
+      return 'An Update on Your Propel2Excel Membership';
     })
     .exhaustive();
 
@@ -242,7 +242,7 @@ async function getAttachments(
         {
           content: file.base64,
           contentType: 'application/pdf',
-          name: 'ColorStack Onboarding Deck.pdf',
+          name: 'Propel2Excel Onboarding Deck.pdf',
         } as EmailAttachment,
       ];
     })

@@ -1,6 +1,6 @@
 import { type PropsWithChildren } from 'react';
 
-import { cx, ProfilePicture, Text } from '@oyster/ui';
+import { cx, ProfilePicture, Text } from '@engine/ui';
 
 export const Leaderboard = () => {};
 

@@ -18,8 +18,8 @@ import { z } from 'zod';
 import {
   listEmails,
   updateAllowEmailShare,
-} from '@oyster/core/member-profile/server';
-import { buildMeta } from '@oyster/core/remix';
+} from '@engine/core/member-profile/server';
+import { buildMeta } from '@engine/core/remix';
 import {
   Button,
   Checkbox,
@@ -28,7 +28,7 @@ import {
   getErrors,
   Text,
   validateForm,
-} from '@oyster/ui';
+} from '@engine/ui';
 
 import {
   ProfileDescription,
@@ -139,9 +139,9 @@ function EmailAddressSection() {
       </ProfileHeader>
 
       <ProfileDescription>
-        If you engage with ColorStack using multiple email addresses (ie:
+        If you engage with Propel2Excel using multiple email addresses (ie:
         school, personal, work), please add them here. Your primary email is the
-        email where you will receive all ColorStack communications.
+        email where you will receive all Propel2Excel communications.
       </ProfileDescription>
 
       <ul className="flex flex-col gap-2">
@@ -184,7 +184,7 @@ function EmailAddressSection() {
         onChange={(e) => submit(e.currentTarget)}
       >
         <Field
-          description="If you go to school where there is a ColorStack chapter, this will allow that chapter's leaders to reach out to you about local events and opportunities."
+          description="If you go to school where there is a Propel2Excel chapter, this will allow that chapter's leaders to reach out to you about local events and opportunities."
           error={errors.allowEmailShare}
           label="Would you like to share your email with chapter leaders?"
         >

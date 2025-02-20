@@ -6,10 +6,10 @@ import {
 } from '@remix-run/node';
 import { Form, useActionData, useNavigate } from '@remix-run/react';
 
-import { deleteEducation } from '@oyster/core/member-profile/server';
-import { type Education } from '@oyster/core/member-profile/ui';
-import { db } from '@oyster/db';
-import { Button, ErrorMessage, Modal } from '@oyster/ui';
+import { deleteEducation } from '@engine/core/member-profile/server';
+import { type Education } from '@engine/core/member-profile/ui';
+import { db } from '@engine/db';
+import { Button, ErrorMessage, Modal } from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 import {

@@ -21,10 +21,10 @@ import {
   getPointsLeaderboard,
   getTotalPoints,
   listActivities,
-} from '@oyster/core/gamification';
-import { type CompletedActivity } from '@oyster/core/gamification/types';
-import { track } from '@oyster/core/mixpanel';
-import { db } from '@oyster/db';
+} from '@engine/core/gamification';
+import { type CompletedActivity } from '@engine/core/gamification/types';
+import { track } from '@engine/core/mixpanel';
+import { db } from '@engine/db';
 import {
   Button,
   cx,
@@ -33,7 +33,7 @@ import {
   Select,
   Text,
   useSearchParams,
-} from '@oyster/ui';
+} from '@engine/ui';
 
 import { Card, type CardProps } from '@/shared/components/card';
 import {
@@ -354,7 +354,7 @@ function PointsLeaderboard({ className }: CardProps) {
       </Card.Header>
 
       <Card.Description>
-        The top point earners in the ColorStack Family. Our community leaders
+        The top point earners in the Propel2Excel Family. Our community leaders
         and role models!
       </Card.Description>
 
@@ -618,7 +618,7 @@ function ActivityHistoryItemDescription({
       );
     })
     .with('react_to_message', () => {
-      const href = `https://colorstack-family.slack.com/archives/${activity.messageReactedToChannelId}/p${activity.messageReactedToId}`;
+      const href = `https://Propel2Excel-family.slack.com/archives/${activity.messageReactedToChannelId}/p${activity.messageReactedToId}`;
 
       return (
         <div className="flex flex-col gap-2">
@@ -641,10 +641,10 @@ function ActivityHistoryItemDescription({
       );
     })
     .with('refer_friend', () => {
-      return <p>You referred a friend to ColorStack.</p>;
+      return <p>You referred a friend to Propel2Excel.</p>;
     })
     .with('reply_to_thread', () => {
-      const href = `https://colorstack-family.slack.com/archives/${activity.threadRepliedToChannelId}/p${activity.threadRepliedToId}`;
+      const href = `https://Propel2Excel-family.slack.com/archives/${activity.threadRepliedToChannelId}/p${activity.threadRepliedToId}`;
 
       return (
         <div className="flex flex-col gap-2">

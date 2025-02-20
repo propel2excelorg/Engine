@@ -137,7 +137,7 @@ export const Student = Entity.merge(StudentSocialLinks)
     lastName: z.string().trim().min(1),
 
     /**
-     * Enum that represents all of the accepted majors from the ColorStack
+     * Enum that represents all of the accepted majors from the Propel2Excel
      * official list.
      *
      * If the student doesn't have a major in this accepted list, then this
@@ -148,7 +148,7 @@ export const Student = Entity.merge(StudentSocialLinks)
 
     /**
      * This is an auto-incremented number that is used to easily identify a
-     * member in the ColorStack system.
+     * member in the Propel2Excel system.
      */
     number: z.number().min(0),
 

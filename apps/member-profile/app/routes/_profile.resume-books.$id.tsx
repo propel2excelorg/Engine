@@ -23,21 +23,21 @@ import { match } from 'ts-pattern';
 import {
   type DegreeType,
   FORMATTED_DEGREEE_TYPE,
-} from '@oyster/core/member-profile/ui';
+} from '@engine/core/member-profile/ui';
 import {
   getResumeBook,
   getResumeBookSubmission,
   listResumeBookSponsors,
   submitResume,
-} from '@oyster/core/resume-books';
+} from '@engine/core/resume-books';
 import {
   RESUME_BOOK_CODING_LANGUAGES,
   RESUME_BOOK_JOB_SEARCH_STATUSES,
   RESUME_BOOK_ROLES,
   SubmitResumeInput,
-} from '@oyster/core/resume-books/types';
-import { db } from '@oyster/db';
-import { FORMATTED_RACE, Race, WorkAuthorizationStatus } from '@oyster/types';
+} from '@engine/core/resume-books/types';
+import { db } from '@engine/db';
+import { FORMATTED_RACE, Race, WorkAuthorizationStatus } from '@engine/types';
 import {
   Button,
   Checkbox,
@@ -53,14 +53,14 @@ import {
   Text,
   useRevalidateOnFocus,
   validateForm,
-} from '@oyster/ui';
+} from '@engine/ui';
 import {
   Tooltip,
   TooltipContent,
   TooltipText,
   TooltipTrigger,
-} from '@oyster/ui/tooltip';
-import { run } from '@oyster/utils';
+} from '@engine/ui/tooltip';
+import { run } from '@engine/utils';
 
 import { HometownField } from '@/shared/components/profile.personal';
 import { Route } from '@/shared/constants';
@@ -786,7 +786,7 @@ function PreferredSponsorsField() {
         errors.preferredCompany2 ||
         errors.preferredCompany3
       }
-      label="Of all the ColorStack sponsors, which are you most interested in working for?"
+      label="Of all the Propel2Excel sponsors, which are you most interested in working for?"
       labelFor={keys.preferredCompany1}
       required
     >

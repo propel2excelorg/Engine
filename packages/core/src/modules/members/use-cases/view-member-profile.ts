@@ -1,5 +1,5 @@
-import { db } from '@oyster/db';
-import { id } from '@oyster/utils';
+import { db } from '@engine/db';
+import { id } from '@engine/utils';
 
 import { type GetBullJobData } from '@/infrastructure/bull.types';
 

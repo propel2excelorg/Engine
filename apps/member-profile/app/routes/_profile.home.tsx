@@ -13,21 +13,21 @@ import {
 } from 'react-feather';
 import { match } from 'ts-pattern';
 
-import { countEventAttendees } from '@oyster/core/events/attendees';
+import { countEventAttendees } from '@engine/core/events/attendees';
 import {
   countMessagesSent,
   getActiveStreakLeaderboard,
-} from '@oyster/core/member-profile/server';
-import { getIpAddress, setMixpanelProfile, track } from '@oyster/core/mixpanel';
-import { db } from '@oyster/db';
+} from '@engine/core/member-profile/server';
+import { getIpAddress, setMixpanelProfile, track } from '@engine/core/mixpanel';
+import { db } from '@engine/db';
 import {
   ACTIVATION_REQUIREMENTS,
   type ActivationRequirement,
   StudentActiveStatus,
   Timezone,
-} from '@oyster/types';
-import { Button, cx, Divider, Text } from '@oyster/ui';
-import { toTitleCase } from '@oyster/utils';
+} from '@engine/types';
+import { Button, cx, Divider, Text } from '@engine/ui';
+import { toTitleCase } from '@engine/utils';
 
 import { Card, type CardProps } from '@/shared/components/card';
 import { Leaderboard } from '@/shared/components/leaderboard';
@@ -358,7 +358,7 @@ function OnboardingSessionCard() {
       <Card.Title>Attend an Onboarding Session 📆</Card.Title>
 
       <Card.Description>
-        Attend an onboarding session to learn more about ColorStack and meet
+        Attend an onboarding session to learn more about Propel2Excel and meet
         other members!
       </Card.Description>
 
@@ -366,7 +366,7 @@ function OnboardingSessionCard() {
         <Button.Slot size="small" variant="primary">
           <Link
             target="_blank"
-            to="https://calendly.com/colorstack-onboarding-ambassador/onboarding"
+            to="https://calendly.com/Propel2Excel-onboarding-ambassador/onboarding"
           >
             Book Onboarding Session <ExternalLink size={20} />
           </Link>
@@ -496,42 +496,42 @@ function ImportantResourcesCard() {
       <ul className="flex flex-col gap-3">
         <ResourceItem
           description="The heartbeat of our community."
-          href="https://colorstack-family.slack.com/"
+          href="https://Propel2Excel-family.slack.com/"
         >
           Slack
         </ResourceItem>
 
         <ResourceItem
           description="A collection of career, community, and academic related resources."
-          href="https://wiki.colorstack.org/the-colorstack-family"
+          href="https://wiki.Propel2Excel.org/the-Propel2Excel-family"
         >
           Member Wiki
         </ResourceItem>
 
         <ResourceItem
-          description="The codebase where our software, called Oyster, lives. Go read + contribute to the codebase!"
-          href="https://github.com/colorstackorg/oyster"
+          description="The codebase where our software, called engine, lives. Go read + contribute to the codebase!"
+          href="https://github.com/Propel2Excelorg/engine"
         >
           GitHub
         </ResourceItem>
 
         <ResourceItem
           description="A collection of our past event recordings. Don't miss a beat!"
-          href="https://youtube.com/@colorstackinc.2266"
+          href="https://youtube.com/@Propel2Excelinc.2266"
         >
           YouTube Channel
         </ResourceItem>
 
         <ResourceItem
-          description="Show off your ColorStack pride with our new merch collection!"
-          href="https://colorstackmerch.org"
+          description="Show off your Propel2Excel pride with our new merch collection!"
+          href="https://Propel2Excelmerch.org"
         >
           Merch Store
         </ResourceItem>
 
         <ResourceItem
           description="Don't act a fool. Abide by our Code of Conduct!"
-          href="https://wiki.colorstack.org/the-colorstack-family/community/code-of-conduct/code-of-conduct"
+          href="https://wiki.Propel2Excel.org/the-Propel2Excel-family/community/code-of-conduct/code-of-conduct"
         >
           Code of Conduct
         </ResourceItem>
@@ -561,31 +561,31 @@ function ResourceItem({
 function SocialsCard() {
   return (
     <Card>
-      <Card.Title>ColorStack Socials</Card.Title>
+      <Card.Title>Propel2Excel Socials</Card.Title>
 
       <Card.Description>
         Be sure to follow us on all our socials to stay up to date with what's
-        happening in ColorStack.
+        happening in Propel2Excel.
       </Card.Description>
 
       <ul className="flex gap-4">
         <SocialItem
           Icon={Linkedin}
-          href="https://linkedin.com/company/colorstack"
+          href="https://linkedin.com/company/Propel2Excel"
         />
 
         <SocialItem
           Icon={Instagram}
-          href="https://instagram.com/colorstackorg"
+          href="https://instagram.com/Propel2Excelorg"
         />
 
-        <SocialItem Icon={Twitter} href="https://twitter.com/colorstackorg" />
+        <SocialItem Icon={Twitter} href="https://twitter.com/Propel2Excelorg" />
 
-        <SocialItem Icon={GitHub} href="https://github.com/colorstackorg" />
+        <SocialItem Icon={GitHub} href="https://github.com/Propel2Excelorg" />
 
         <SocialItem
           Icon={Youtube}
-          href="https://youtube.com/@colorstackinc.2266"
+          href="https://youtube.com/@Propel2Excelinc.2266"
         />
       </ul>
     </Card>
@@ -611,30 +611,30 @@ function MerchStoreCard() {
       <Card.Title>Merch Store</Card.Title>
 
       <Card.Description>
-        Show off your pride as a member of the ColorStack community with our new
+        Show off your pride as a member of the Propel2Excel community with our new
         merch collection!
       </Card.Description>
 
       <ul className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] items-center gap-4">
         <MerchStoreItem
-          alt="ColorStack Shirt #1"
-          src="/images/colorstack-shirt-black-1.png"
+          alt="Propel2Excel Shirt #1"
+          src="/images/Propel2Excel-shirt-black-1.png"
         />
 
         <MerchStoreItem
-          alt="ColorStack Notebook"
-          src="/images/colorstack-notebook-navy.png"
+          alt="Propel2Excel Notebook"
+          src="/images/Propel2Excel-notebook-navy.png"
         />
 
         <MerchStoreItem
-          alt="ColorStack Shirt #2"
-          src="/images/colorstack-shirt-black-2.png"
+          alt="Propel2Excel Shirt #2"
+          src="/images/Propel2Excel-shirt-black-2.png"
         />
       </ul>
 
       <Button.Group>
         <Button.Slot variant="primary">
-          <a href="https://colorstackmerch.org" target="_blank">
+          <a href="https://Propel2Excelmerch.org" target="_blank">
             Shop Now <ExternalLink size={20} />
           </a>
         </Button.Slot>

@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import dedent from 'dedent';
 
-import { db } from '@oyster/db';
+import { db } from '@engine/db';
 
 import { job } from '@/infrastructure/bull';
 import { STUDENT_PROFILE_URL } from '@/shared/env';
@@ -68,7 +68,7 @@ export async function sendCompanyReviewNotifications({
     const message = dedent`
       Congratulations on completing your role as *${title}* at *${companyName}*! 🎉
 
-      Please take a moment to <${reviewURL}|*share a review*> -- your ColorStack peers would love to hear about it!
+      Please take a moment to <${reviewURL}|*share a review*> -- your Propel2Excel peers would love to hear about it!
     `;
 
     job('notification.slack.send', {

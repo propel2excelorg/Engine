@@ -1,5 +1,5 @@
-import { db } from '@oyster/db';
-import { id } from '@oyster/utils';
+import { db } from '@engine/db';
+import { id } from '@engine/utils';
 
 import { deleteObject, putObject } from '@/infrastructure/s3';
 import { type UpdateResourceInput } from '@/modules/resources/resources.types';

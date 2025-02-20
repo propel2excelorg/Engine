@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 
-import { db } from '@oyster/db';
+import { db } from '@engine/db';
 
 import { job } from '@/infrastructure/bull';
 import { type GetBullJobData } from '@/infrastructure/bull.types';
@@ -19,8 +19,8 @@ export async function onMemberActivated({
     expiresOn: dayjs().add(2, 'week').format('YYYY-MM-DD'),
     initialValue: '50.00',
     message:
-      'Congratulations on becoming an activated ColorStack member! 🎉 ' +
-      'From the team at ColorStack, we hope you enjoy your new merch! 🔥',
+      'Congratulations on becoming an activated Propel2Excel member! 🎉 ' +
+      'From the team at Propel2Excel, we hope you enjoy your new merch! 🔥',
     note: 'This was awarded for member activation.',
     recipient: {
       email: member.email,

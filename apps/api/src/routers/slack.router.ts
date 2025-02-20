@@ -2,7 +2,7 @@ import crypto from 'crypto';
 import express from 'express';
 import { match } from 'ts-pattern';
 
-import { job } from '@oyster/core/api';
+import { job } from '@engine/core/api';
 
 import { type SlackRequestBody, SlackRequestHeaders } from './slack.types';
 import { ENV } from '../shared/env';
@@ -165,7 +165,7 @@ slackEventRouter.post('/slack/events', async (req: RawBodyRequest, res) => {
 });
 
 type SlackShortcutPayload = {
-  callback_id: 'ask_colorstack_ai';
+  callback_id: 'ask_Propel2Excel_ai';
   channel: { id: string };
   message: { text: string; thread_ts?: string; ts: string };
   type: 'message_action';
@@ -196,7 +196,7 @@ slackShortcutsRouter.post(
 
       match(payload)
         .with(
-          { type: 'message_action', callback_id: 'ask_colorstack_ai' },
+          { type: 'message_action', callback_id: 'ask_Propel2Excel_ai' },
           (payload) => {
             job('slack.message.answer', {
               channelId: payload.channel.id,

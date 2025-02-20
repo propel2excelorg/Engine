@@ -1,10 +1,10 @@
 import { type SelectExpression, sql } from 'kysely';
 import { z } from 'zod';
 
-import { type DB, db } from '@oyster/db';
+import { type DB, db } from '@engine/db';
 
 import { withCache } from '@/infrastructure/redis';
-import { ColorStackError } from '@/shared/errors';
+import { Propel2ExcelError } from '@/shared/errors';
 
 // Environment Variables
 
@@ -63,7 +63,7 @@ export async function getAutocompletedCities(search: string) {
     const json = await response.json();
 
     if (!response.ok) {
-      const _ = new ColorStackError()
+      const _ = new Propel2ExcelError()
         .withMessage('Failed to get autocompleted cities from Google.')
         .withContext({ response: json, status: response.status })
         .report();
@@ -74,7 +74,7 @@ export async function getAutocompletedCities(search: string) {
     const result = GoogleAutocompleteData.safeParse(json);
 
     if (!result.success) {
-      const _ = new ColorStackError()
+      const _ = new Propel2ExcelError()
         .withMessage('Failed to validate autocompleted cities from Google.')
         .withContext({ error: result.error, response: json })
         .report();
@@ -145,7 +145,7 @@ export async function getCityDetails(id: string) {
     const json = await response.json();
 
     if (!response.ok) {
-      const _ = new ColorStackError()
+      const _ = new Propel2ExcelError()
         .withMessage('Failed to get city details from Google.')
         .withContext({ response: json, status: response.status })
         .report();
@@ -156,7 +156,7 @@ export async function getCityDetails(id: string) {
     const result = GooglePlaceDetailsResponse.safeParse(json);
 
     if (!result.success) {
-      const _ = new ColorStackError()
+      const _ = new Propel2ExcelError()
         .withMessage('Failed to validate city details from Google.')
         .withContext({ error: result.error, response: json })
         .report();

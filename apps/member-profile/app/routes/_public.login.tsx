@@ -1,7 +1,7 @@
 import { json } from '@remix-run/node';
 import { Outlet } from '@remix-run/react';
 
-import { Login, Public } from '@oyster/ui';
+import { Login, Public } from '@engine/ui';
 
 export async function loader() {
   return json({});
@@ -10,7 +10,7 @@ export async function loader() {
 export default function LoginLayout() {
   return (
     <Public.Content>
-      <Login.Title>ColorStack Profile</Login.Title>
+      <Login.Title>Propel2Excel Profile</Login.Title>
       <Outlet />
     </Public.Content>
   );

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { Email, type ExtractValue } from '@oyster/types';
+import { Email, type ExtractValue } from '@engine/types';
 
 // Enums
 
@@ -21,7 +21,7 @@ export const ReferFriendInput = z.object({
       value.endsWith('.edu') ||
       value.endsWith('.ca') ||
       value.endsWith('mymdc.net') ||
-      value.endsWith('@colorstack.org')
+      value.endsWith('@Propel2Excel.org')
     );
   }, 'Must be a valid .edu email.'),
   firstName: z.string().trim().min(1),

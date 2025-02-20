@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 
-import { db } from '@oyster/db';
-import { type StudentActiveStatus } from '@oyster/types';
+import { db } from '@engine/db';
+import { type StudentActiveStatus } from '@engine/types';
 
 import { type GetBullJobData } from '@/infrastructure/bull.types';
 
@@ -15,7 +15,7 @@ export async function createNewActiveStatuses(_: CreateNewActiveStatusesInput) {
   const endDate = endDateObject.toDate();
 
   // Get all the students that were accepted before this window's start date.
-  // We won't track statuses for students that have not been in ColorStack
+  // We won't track statuses for students that have not been in Propel2Excel
   // for at least a week.
   const students = await db
     .selectFrom('students')

@@ -1,16 +1,16 @@
 # Contributing
 
-First off, thank you for taking the time to contribute! 🥳 ColorStack is nothing
+First off, thank you for taking the time to contribute! 🥳 Propel2Excel is nothing
 without its community and that certainly extends to the software that we build.
 This is a big team effort!
 
 ## First Things First
 
-The #1 reason that we decided to open source Oyster was so that ColorStack
+The #1 reason that we decided to open source engine was so that Propel2Excel
 members can learn from and eventually contribute to a real-world production
 codebase. Everything we do is centered around our helping our members fulfuill
 their dreams of becoming software engineers. That being said, in order to make
-space for our community, we will only accept contributions from ColorStack
+space for our community, we will only accept contributions from Propel2Excel
 members. ❤️
 
 ## Table of Contents
@@ -24,7 +24,7 @@ members. ❤️
 
 ## Getting Started
 
-Follow these steps in order to get started with contributing to Oyster!
+Follow these steps in order to get started with contributing to Engine!
 
 1. Install [Docker Desktop](https://docs.docker.com/engine/install). After it's
    installed, start the application!
@@ -61,7 +61,7 @@ Follow these steps in order to get started with contributing to Oyster!
    to your local machine.
 
    ```
-   git clone https://github.com/<YOUR_USERNAME>/oyster.git
+   git clone https://github.com/<YOUR_USERNAME>/engine.git
    ```
 
 6. Open the project in the editor of your choice and install all of our
@@ -72,10 +72,10 @@ Follow these steps in order to get started with contributing to Oyster!
 7. [Configure the upstream repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-repository-for-a-fork),
    which will help you with
    [syncing your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork)
-   with the Oyster codebase as new code is added to it in the future.
+   with the engine codebase as new code is added to it in the future.
 
    ```
-   git remote add upstream https://github.com/colorstackorg/oyster.git
+   git remote add upstream https://github.com/Propel2Excelorg/engine.git
    ```
 
 8. If you're not on macOS M1/M2/M3, please skip this step! If you are, you'll
@@ -175,7 +175,7 @@ Follow these steps in order to get started with contributing to Oyster!
     yarn dx:down
     ```
 
-That's it -- you've finished setting up Oyster locally! All your applications
+That's it -- you've finished setting up engine locally! All your applications
 are running properly and you're ready to get your first contribution in!
 
 ## Your First PR
@@ -195,21 +195,21 @@ one should only take a few minutes. Here's what we want you to do:
 4. Create a pull request.
    1. The title can be: `chore: my first contribution 🚀`
    2. The description can be: `Added name to CONTRIBUTORS.yml!`
-5. Here is an [example PR](https://github.com/colorstackorg/oyster/pull/417) in
+5. Here is an [example PR](https://github.com/Propel2Excelorg/engine/pull/417) in
    case you want to follow one!
 
 Boom, you're all done! This should be approved and merged soon, and you'll
-officially be an Oyster contributor! 🥳
+officially be an engine contributor! 🥳
 
 ## Deciding What to Work On
 
 You can start by browsing through our list of
-[issues](https://github.com/colorstackorg/oyster/issues). Once you've decided on
+[issues](https://github.com/Propel2Excelorg/engine/issues). Once you've decided on
 an issue, leave a comment and wait to get approval from one of our codebase
 admins - this helps avoid multiple people working on this same issue.
 
 Most of our work comes from our
-[product roadmap](https://github.com/orgs/colorstackorg/projects/4) so if
+[product roadmap](https://github.com/orgs/Propel2Excelorg/projects/4) so if
 there's something that interests you there that hasn't been converted into an
 issue yet, feel free to ask about it.
 
@@ -217,15 +217,15 @@ issue yet, feel free to ask about it.
 
 If you have a feature request or idea that would improve our product, please
 start a thread in our
-[`#oyster`](https://colorstack-family.slack.com/channels/C06S0DBFD6X) channel in
+[`#engine`](https://Propel2Excel-family.slack.com/channels/C06S0DBFD6X) channel in
 Slack! If the maintainers see value in the idea, they will add it to our
-[product roadmap](https://github.com/orgs/colorstackorg/projects/4) or create an
-[issue](https://github.com/colorstackorg/oyster/issues) directly.
+[product roadmap](https://github.com/orgs/Propel2Excelorg/projects/4) or create an
+[issue](https://github.com/Propel2Excelorg/engine/issues) directly.
 
 ### Reporting Bugs
 
 If you find a bug, please file a
-[bug report](https://github.com/colorstackorg/oyster/issues/new?assignees=&labels=Bug+%F0%9F%90%9E&projects=&template=bug_report.md&title=)
+[bug report](https://github.com/Propel2Excelorg/engine/issues/new?assignees=&labels=Bug+%F0%9F%90%9E&projects=&template=bug_report.md&title=)
 directly!
 
 ## Making a Pull Request

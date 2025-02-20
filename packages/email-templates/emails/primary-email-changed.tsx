@@ -11,14 +11,14 @@ export function PrimaryEmailChangedEmail({
   return (
     <Email.Template>
       <Email.Preview>
-        Heads up - your ColorStack primary email changed!
+        Heads up - your Propel2Excel primary email changed!
       </Email.Preview>
 
       <Email.Main>
         <Email.Text>Hi {firstName},</Email.Text>
 
         <Email.Text>
-          Your ColorStack primary email has changed from <b>{previousEmail}</b>{' '}
+          Your Propel2Excel primary email has changed from <b>{previousEmail}</b>{' '}
           to <b>{newEmail}</b>. A couple notes on this change:
         </Email.Text>
 
@@ -40,8 +40,8 @@ export function PrimaryEmailChangedEmail({
 
         <Email.Text>
           If you didn't request this change, please email us at{' '}
-          <Email.Link href="mailto:membership@colorstack.org">
-            membership@colorstack.org
+          <Email.Link href="mailto:membership@Propel2Excel.org">
+            membership@Propel2Excel.org
           </Email.Link>
           .
         </Email.Text>

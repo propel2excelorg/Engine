@@ -12,21 +12,21 @@ export function StudentAnniversaryEmail({
   return (
     <Email.Template>
       <Email.Preview>
-        Congratulations on {years} {yearLabel} with ColorStack! 🎉
+        Congratulations on {years} {yearLabel} with Propel2Excel! 🎉
       </Email.Preview>
 
       <Email.Main>
         <Email.Text>Hello {firstName},</Email.Text>
 
         <Email.Text>
-          Happy ColorStack-aversary! 🥳
+          Happy Propel2Excel-aversary! 🥳
           <br />
           <br />
           Over the past {years > 1 ? `${years} years` : 'year'}, you've shown
           unwavering support, talent, and passion. Your commitment to this
           community has truly made a difference. Thanks to members like you,
-          ColorStack continues to thrive and empower individuals across tech.
-          We're so grateful to have you as part of the ColorStack family!
+          Propel2Excel continues to thrive and empower individuals across tech.
+          We're so grateful to have you as part of the Propel2Excel family!
           <br />
           <br />
           Here's to many more impactful years together! 🎉

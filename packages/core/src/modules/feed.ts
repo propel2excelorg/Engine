@@ -3,7 +3,7 @@ import dayOfYear from 'dayjs/plugin/dayOfYear';
 import dedent from 'dedent';
 import { match } from 'ts-pattern';
 
-import { db } from '@oyster/db';
+import { db } from '@engine/db';
 
 import { job, registerWorker } from '@/infrastructure/bull';
 import { FeedBullJob, type GetBullJobData } from '@/infrastructure/bull.types';
@@ -168,7 +168,7 @@ async function getResourcesMessage(): Promise<string | null> {
     .map((resource) => {
       const url = new URL('/resources', STUDENT_PROFILE_URL);
 
-      // Example: https://app.colorstack.io/resources?id=123
+      // Example: https://app.Propel2Excel.io/resources?id=123
       url.searchParams.set('id', resource.id);
 
       return `• <${url}|*${resource.title}*> by <@${resource.posterSlackId}>`;
@@ -177,7 +177,7 @@ async function getResourcesMessage(): Promise<string | null> {
 
   const url = new URL('/resources', STUDENT_PROFILE_URL);
 
-  // Example: https://app.colorstack.io/resources?date=2024-08-15
+  // Example: https://app.Propel2Excel.io/resources?date=2024-08-15
   url.searchParams.set('date', yesterday.format('YYYY-MM-DD'));
 
   const title =

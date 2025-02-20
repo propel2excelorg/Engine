@@ -1,5 +1,5 @@
-import { db } from '@oyster/db';
-import { type EventAttendee } from '@oyster/types';
+import { db } from '@engine/db';
+import { type EventAttendee } from '@engine/types';
 
 import { job } from '@/infrastructure/bull';
 import { fail, type Result, success } from '@/shared/utils/core';

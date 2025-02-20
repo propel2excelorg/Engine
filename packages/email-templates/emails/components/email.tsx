@@ -95,7 +95,7 @@ Email.Main = function EmailMain({ children }: PropsWithChildren) {
     <Section
       style={{
         backgroundColor: 'white',
-        backgroundImage: `url(https://app.colorstack.io/images/colorstack-background.png)`,
+        backgroundImage: `url(https://app.Propel2Excel.io/images/Propel2Excel-background.png)`,
         width: '100%',
       }}
     >
@@ -112,8 +112,8 @@ Email.Main = function EmailMain({ children }: PropsWithChildren) {
         }}
       >
         <Img
-          alt="ColorStack Wordmark"
-          src="https://app.colorstack.io/images/colorstack-wordmark.png"
+          alt="Propel2Excel Wordmark"
+          src="https://app.Propel2Excel.io/images/Propel2Excel-wordmark.png"
           style={{ marginBottom: 24 }}
           width={160}
         />
@@ -133,18 +133,18 @@ Email.Preview = function EmailPreview({ children }: EmailPreviewProps) {
 
 type EmailSignatureProps = {
   children?: React.ReactNode;
-  type?: 'colorstack' | 'jehron';
+  type?: 'Propel2Excel' | 'jehron';
 };
 
 const EmailSignatureContent: Record<
   Required<EmailSignatureProps>['type'],
   React.ReactNode
 > = {
-  colorstack: (
+  Propel2Excel: (
     <>
       Best,
       <br />
-      The ColorStack Team
+      The Propel2Excel Team
     </>
   ),
   jehron: (
@@ -160,7 +160,7 @@ const EmailSignatureContent: Record<
 
 Email.Signature = function EmailSignature({
   children,
-  type = 'colorstack',
+  type = 'Propel2Excel',
 }: EmailSignatureProps) {
   return (
     <Email.Text marginBottom="0px" marginTop="32px">

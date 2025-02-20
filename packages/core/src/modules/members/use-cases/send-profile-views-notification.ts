@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 
-import { db } from '@oyster/db';
+import { db } from '@engine/db';
 
 import { job } from '@/infrastructure/bull';
 import { type GetBullJobData } from '@/infrastructure/bull.types';
@@ -39,7 +39,7 @@ export async function sendProfileViewsNotification(
     if (record.slackId) {
       job('notification.slack.send', {
         channel: record.slackId,
-        message: `Last month, your profile was viewed ${record.views} times in the <https://app.colorstack.io/directory|*Member Directory*>! Keep it up! 🎉`,
+        message: `Last month, your profile was viewed ${record.views} times in the <https://app.Propel2Excel.io/directory|*Member Directory*>! Keep it up! 🎉`,
         workspace: 'regular',
       });
     }

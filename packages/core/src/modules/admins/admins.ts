@@ -1,5 +1,5 @@
-import { type DB, db } from '@oyster/db';
-import { id } from '@oyster/utils';
+import { type DB, db } from '@engine/db';
+import { id } from '@engine/utils';
 
 import { type SelectExpression } from '@/shared/types';
 import { fail, type Result, success } from '@/shared/utils/core';
@@ -79,7 +79,7 @@ export async function listAdmins<Selection extends AdminSelection>({
 // Use Cases
 
 /**
- * Adds a new ColorStack admin, which grants the user access to the Admin
+ * Adds a new Propel2Excel admin, which grants the user access to the Admin
  * Dashboard. The acting admin must have the required role to add an admin with
  * the specified role.
  *
@@ -135,7 +135,7 @@ export async function addAdmin({
     await trx
       .insertInto('admins')
       .values((eb) => {
-        // If the admin also happens to be a member of ColorStack, then we can
+        // If the admin also happens to be a member of Propel2Excel, then we can
         // link the records upon creation.
         const memberId = eb
           .selectFrom('students')
@@ -162,7 +162,7 @@ export async function addAdmin({
 }
 
 /**
- * Removes a ColorStack admin. Note that the actor must have the required role
+ * Removes a Propel2Excel admin. Note that the actor must have the required role
  * to remove an admin (ie: admin cannot remove an owner).
  *
  * This will revoke the user access to the Admin Dashboard. Note that this

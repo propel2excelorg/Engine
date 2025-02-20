@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { Edit, Plus, Trash } from 'react-feather';
 import { generatePath } from 'react-router';
 
-import { listFeatureFlags } from '@oyster/core/admin-dashboard/server';
+import { listFeatureFlags } from '@engine/core/admin-dashboard/server';
 import {
   Button,
   Dashboard,
@@ -16,7 +16,7 @@ import {
   Pill,
   Table,
   type TableColumnProps,
-} from '@oyster/ui';
+} from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 import { ensureUserAuthenticated } from '@/shared/session.server';

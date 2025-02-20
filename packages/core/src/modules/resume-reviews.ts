@@ -3,8 +3,8 @@ import { sql } from 'kysely';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { db, relativeTime } from '@oyster/db';
-import { id } from '@oyster/utils';
+import { db, relativeTime } from '@engine/db';
+import { id } from '@engine/utils';
 
 import { getChatCompletion } from '@/infrastructure/ai';
 import { job, registerWorker } from '@/infrastructure/bull';
@@ -14,7 +14,7 @@ import {
 } from '@/infrastructure/bull.types';
 import { track } from '@/infrastructure/mixpanel';
 import { STUDENT_PROFILE_URL } from '@/shared/env';
-import { ColorStackError } from '@/shared/errors';
+import { Propel2ExcelError } from '@/shared/errors';
 import { fail, type Result, success } from '@/shared/utils/core';
 import { getTextFromPDF } from '@/shared/utils/file';
 import { FileLike } from '@/shared/utils/zod';
@@ -198,7 +198,7 @@ export async function reviewResume({
 
     return success(feedback);
   } catch (e) {
-    const error = new ColorStackError()
+    const error = new Propel2ExcelError()
       .withMessage('Failed to parse the AI response.')
       .withContext({ data: completionResult.data, error: e })
       .report();

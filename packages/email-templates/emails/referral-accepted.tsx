@@ -11,14 +11,14 @@ export function ReferralAcceptedEmail({
 }: EmailTemplateData<'referral-accepted'>) {
   return (
     <Email.Template>
-      <Email.Preview>Your referral was accepted into ColorStack!</Email.Preview>
+      <Email.Preview>Your referral was accepted into Propel2Excel!</Email.Preview>
 
       <Email.Main>
         <Email.Text>Hi {firstName},</Email.Text>
 
         <Email.Text>
           Great news -- {referredFirstName} {referredLastName} used your
-          referral and was accepted into ColorStack! 🥳 Thank you for helping to
+          referral and was accepted into Propel2Excel! 🥳 Thank you for helping to
           grow our community!
         </Email.Text>
 

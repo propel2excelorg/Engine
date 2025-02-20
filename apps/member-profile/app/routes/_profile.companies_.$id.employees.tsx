@@ -5,8 +5,8 @@ import {
 } from '@remix-run/node';
 import { generatePath, Link, useLoaderData } from '@remix-run/react';
 
-import { listCompanyEmployees } from '@oyster/core/employment/server';
-import { cx, getTextCn, ProfilePicture, Text } from '@oyster/ui';
+import { listCompanyEmployees } from '@engine/core/employment/server';
+import { cx, getTextCn, ProfilePicture, Text } from '@engine/ui';
 
 import { Card } from '@/shared/components/card';
 import { Route } from '@/shared/constants';
@@ -71,7 +71,7 @@ function CurrentEmployees() {
         </ul>
       ) : (
         <Text color="gray-500">
-          There are no current employees from ColorStack.
+          There are no current employees from Propel2Excel.
         </Text>
       )}
     </Card>
@@ -93,7 +93,7 @@ function PastEmployees() {
         </ul>
       ) : (
         <Text color="gray-500">
-          There are no past employees from ColorStack.
+          There are no past employees from Propel2Excel.
         </Text>
       )}
     </Card>

@@ -9,8 +9,8 @@ import { Form, useActionData, useLoaderData } from '@remix-run/react';
 import {
   changePrimaryEmail,
   listEmails,
-} from '@oyster/core/member-profile/server';
-import { ChangePrimaryEmailInput } from '@oyster/core/member-profile/ui';
+} from '@engine/core/member-profile/server';
+import { ChangePrimaryEmailInput } from '@engine/core/member-profile/ui';
 import {
   Button,
   ErrorMessage,
@@ -19,7 +19,7 @@ import {
   Modal,
   Select,
   validateForm,
-} from '@oyster/ui';
+} from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 import {

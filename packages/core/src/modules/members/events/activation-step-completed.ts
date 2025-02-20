@@ -1,12 +1,12 @@
 import dayjs from 'dayjs';
 import dedent from 'dedent';
 
-import { db } from '@oyster/db';
+import { db } from '@engine/db';
 import {
   ACTIVATION_REQUIREMENTS,
   type ActivationRequirement,
   type Student,
-} from '@oyster/types';
+} from '@engine/types';
 
 import { job } from '@/infrastructure/bull';
 import { activateMember } from '@/modules/members/use-cases/activate-member';
@@ -226,9 +226,9 @@ async function sendProgressNotification({
     message = dedent`
       Congratulations, ${firstName}! 🎉
 
-      You've completed all of your activation requirements, which means...you are now an *activated* ColorStack member.
+      You've completed all of your activation requirements, which means...you are now an *activated* Propel2Excel member.
 
-      Look out for an email that includes a GIFT CARD to the <https://colorstackmerch.org|*ColorStack Merch Store*>! 🎁
+      Look out for an email that includes a GIFT CARD to the <https://Propel2Excelmerch.org|*Propel2Excel Merch Store*>! 🎁
     `;
   } else {
     message = dedent`
@@ -236,7 +236,7 @@ async function sendProgressNotification({
 
       You're making some great progress on your activation! You've now completed ${completedRequirements}/${totalRequirements} requirements.
 
-      See an updated checklist in your <https://app.colorstack.io/home/activation|*Member Profile*>! 👀
+      See an updated checklist in your <https://app.Propel2Excel.io/home/activation|*Member Profile*>! 👀
     `;
   }
 

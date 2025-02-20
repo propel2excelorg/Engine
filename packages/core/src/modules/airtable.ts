@@ -1,13 +1,13 @@
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { db } from '@oyster/db';
+import { db } from '@engine/db';
 import {
   FORMATTED_DEMOGRAPHICS,
   FORMATTED_GENDER,
   FORMATTED_RACE,
   Student,
-} from '@oyster/types';
+} from '@engine/types';
 
 import { registerWorker } from '@/infrastructure/bull';
 import {
@@ -15,7 +15,7 @@ import {
   type GetBullJobData,
 } from '@/infrastructure/bull.types';
 import { IS_PRODUCTION } from '@/shared/env';
-import { ColorStackError, ErrorWithContext } from '@/shared/errors';
+import { Propel2ExcelError, ErrorWithContext } from '@/shared/errors';
 import { RateLimiter } from '@/shared/utils/rate-limiter';
 
 // Environment Variables
@@ -135,7 +135,7 @@ async function createAirtableMemberRecord({
     airtableBaseId: AIRTABLE_FAMILY_BASE_ID,
     airtableTableId: AIRTABLE_MEMBERS_TABLE_ID,
     data: {
-      'ColorStack ID': studentId,
+      'Propel2Excel ID': studentId,
       Email: record.email,
       'Expected Graduation Year': record.graduationYear.toString(),
       'First Name': record.firstName,
@@ -355,7 +355,7 @@ export async function createAirtableTable({
   const json = await response.json();
 
   if (!response.ok) {
-    throw new ColorStackError()
+    throw new Propel2ExcelError()
       .withMessage('Failed to create Airtable table.')
       .withContext({
         baseId,
@@ -481,7 +481,7 @@ export async function bulkUpdateAirtableRecord({
   const json = await response.json();
 
   if (!response.ok) {
-    throw new ColorStackError()
+    throw new Propel2ExcelError()
       .withMessage('Failed to bulk update records in Airtable.')
       .withContext({ json, records, status: response.status })
       .report();

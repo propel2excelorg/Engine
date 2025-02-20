@@ -6,9 +6,9 @@ import {
 import { Form, useActionData, useLoaderData } from '@remix-run/react';
 import { type z } from 'zod';
 
-import { updateMember } from '@oyster/core/member-profile/server';
-import { track } from '@oyster/core/mixpanel';
-import { Student } from '@oyster/types';
+import { updateMember } from '@engine/core/member-profile/server';
+import { track } from '@engine/core/mixpanel';
+import { Student } from '@engine/types';
 import {
   Button,
   Divider,
@@ -17,7 +17,7 @@ import {
   InputField,
   PhoneNumberInput,
   validateForm,
-} from '@oyster/ui';
+} from '@engine/ui';
 
 import {
   ProfileHeader,
@@ -175,7 +175,7 @@ export default function UpdateGeneralInformationSection() {
         />
 
         <Field
-          description="Enter your 10-digit phone number. We'll use this to send you important ColorStack updates."
+          description="Enter your 10-digit phone number. We'll use this to send you important Propel2Excel updates."
           error={errors.phoneNumber}
           label="Phone Number"
           labelFor={keys.phoneNumber}

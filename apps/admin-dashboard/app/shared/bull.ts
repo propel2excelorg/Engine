@@ -1,4 +1,4 @@
-import { getQueue, listQueueNames } from '@oyster/core/bull';
+import { getQueue, listQueueNames } from '@engine/core/bull';
 
 /**
  * Validates a queue name and returns the corresponding queue instance.

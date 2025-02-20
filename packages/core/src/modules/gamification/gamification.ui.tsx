@@ -7,8 +7,8 @@ import {
   Input,
   Select,
   Textarea,
-} from '@oyster/ui';
-import { toTitleCase } from '@oyster/utils';
+} from '@engine/ui';
+import { toTitleCase } from '@engine/utils';
 
 import {
   ActivityPeriod,

@@ -23,7 +23,7 @@ export async function onMemberRemoved({
   });
 
   job('notification.slack.send', {
-    message: `Member with the email "${email}" has been removed from ColorStack.`,
+    message: `Member with the email "${email}" has been removed from Propel2Excel.`,
     workspace: 'internal',
   });
 

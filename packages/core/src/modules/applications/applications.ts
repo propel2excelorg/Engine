@@ -2,9 +2,9 @@ import dayjs from 'dayjs';
 import { type SelectExpression, sql } from 'kysely';
 import { match } from 'ts-pattern';
 
-import { type DB, db } from '@oyster/db';
-import { type Application, OtherDemographic } from '@oyster/types';
-import { id, run } from '@oyster/utils';
+import { type DB, db } from '@engine/db';
+import { type Application, OtherDemographic } from '@engine/types';
+import { id, run } from '@engine/utils';
 
 import { job, registerWorker } from '@/infrastructure/bull';
 import {
@@ -200,7 +200,7 @@ export async function acceptApplication(
         .execute();
     }
 
-    // Some applicants apply multiple times to ColorStack (typically it's an
+    // Some applicants apply multiple times to Propel2Excel (typically it's an
     // accident) and historically we would _try_ to accept all of their
     // applications, but we can't have multiple members with the same email
     // so it would cause issues. We'll scrap any other pending applications
@@ -303,7 +303,7 @@ export async function acceptApplication(
 }
 
 /**
- * Applies to join the ColorStack family. This also queues a job to send a
+ * Applies to join the Propel2Excel family. This also queues a job to send a
  * confirmation email to the applicant.
  */
 export async function apply(input: ApplyInput) {
@@ -426,7 +426,7 @@ const ExpandedRejectionReason: Record<ApplicationRejectionReason, string> = {
     'does not match the information you provided in your application.',
 
   email_already_used:
-    'There is already a ColorStack member with this email address.',
+    'There is already a Propel2Excel member with this email address.',
 
   // We're not going to email them again since they've already bounced...
   email_bounced: '',

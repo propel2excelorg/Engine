@@ -6,9 +6,9 @@ import {
 import { Form, useActionData, useLoaderData } from '@remix-run/react';
 import { Check } from 'react-feather';
 
-import { getEvent } from '@oyster/core/events';
-import { checkIntoEvent } from '@oyster/core/events/attendees';
-import { Button, Modal } from '@oyster/ui';
+import { getEvent } from '@engine/core/events';
+import { checkIntoEvent } from '@engine/core/events/attendees';
+import { Button, Modal } from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 import { ensureUserAuthenticated, user } from '@/shared/session.server';

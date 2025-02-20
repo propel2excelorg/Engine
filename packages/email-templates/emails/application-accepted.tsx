@@ -9,14 +9,14 @@ export function ApplicationAcceptedEmail({
   return (
     <Email.Template>
       <Email.Preview>
-        Welcome to the ColorStack family, {firstName}! ❤️ Here are your next
+        Welcome to the Propel2Excel family, {firstName}! ❤️ Here are your next
         steps to join our community:
       </Email.Preview>
 
       <Email.Main>
         <Email.Text>Hi {firstName},</Email.Text>
         <Email.Text>
-          Congratulations, you've been accepted to join the ColorStack family!
+          Congratulations, you've been accepted to join the Propel2Excel family!
           🎉
         </Email.Text>
 
@@ -32,7 +32,7 @@ export function ApplicationAcceptedEmail({
         <ol>
           <li>
             <Email.Text>
-              <Email.Link href="https://app.colorstack.io">
+              <Email.Link href="https://app.Propel2Excel.io">
                 Sign into your very own Member Profile
               </Email.Link>
               , where you'll be able to see cool information about your
@@ -42,9 +42,9 @@ export function ApplicationAcceptedEmail({
 
           <li>
             <Email.Text>
-              Earn your first ColorStack points (you'll learn what that means
+              Earn your first Propel2Excel points (you'll learn what that means
               soon) by{' '}
-              <Email.Link href="https://app.colorstack.io/profile">
+              <Email.Link href="https://app.Propel2Excel.io/profile">
                 updating your education + work history
               </Email.Link>
               . 🏆
@@ -53,7 +53,7 @@ export function ApplicationAcceptedEmail({
 
           <li>
             <Email.Text>
-              <Email.Link href="https://calendly.com/colorstack-onboarding-ambassador/onboarding">
+              <Email.Link href="https://calendly.com/Propel2Excel-onboarding-ambassador/onboarding">
                 Book your group onboarding call
               </Email.Link>{' '}
               to learn more about our programming, how to best use the Slack,

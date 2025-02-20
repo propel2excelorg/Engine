@@ -28,7 +28,7 @@ import { generatePath } from 'react-router';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { listQueueNames } from '@oyster/core/bull';
+import { listQueueNames } from '@engine/core/bull';
 import {
   cx,
   Dashboard,
@@ -39,8 +39,8 @@ import {
   Select,
   Table,
   type TableColumnProps,
-} from '@oyster/ui';
-import { toTitleCase } from '@oyster/utils';
+} from '@engine/ui';
+import { toTitleCase } from '@engine/utils';
 
 import { validateQueue } from '@/shared/bull';
 import { Route } from '@/shared/constants';

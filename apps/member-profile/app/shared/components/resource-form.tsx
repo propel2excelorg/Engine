@@ -6,7 +6,7 @@ import React, {
   useState,
 } from 'react';
 
-import { ResourceType } from '@oyster/core/resources';
+import { ResourceType } from '@engine/core/resources';
 import {
   Checkbox,
   ComboboxPopover,
@@ -24,8 +24,8 @@ import {
   Pill,
   Select,
   Textarea,
-} from '@oyster/ui';
-import { id } from '@oyster/utils';
+} from '@engine/ui';
+import { id } from '@engine/utils';
 
 import { type SearchTagsResult } from '@/routes/api.tags.search';
 

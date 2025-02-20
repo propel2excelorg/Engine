@@ -1,4 +1,4 @@
-import { tailwindConfig } from '@oyster/tailwind';
+import { tailwindConfig } from '@engine/tailwind';
 
 /** @type {import('tailwindcss').Config} */
 export default {

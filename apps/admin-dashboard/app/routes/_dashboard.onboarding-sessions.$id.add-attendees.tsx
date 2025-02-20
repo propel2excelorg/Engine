@@ -7,15 +7,15 @@ import {
 import { Form, useActionData } from '@remix-run/react';
 import { z } from 'zod';
 
-import { addOnboardingSessionAttendees } from '@oyster/core/admin-dashboard/server';
-import { db } from '@oyster/db';
+import { addOnboardingSessionAttendees } from '@engine/core/admin-dashboard/server';
+import { db } from '@engine/db';
 import {
   Button,
   ErrorMessage,
   getErrors,
   Modal,
   validateForm,
-} from '@oyster/ui';
+} from '@engine/ui';
 
 import { OnboardingSessionAttendeesField } from '@/shared/components/onboarding-session-form';
 import { Route } from '@/shared/constants';

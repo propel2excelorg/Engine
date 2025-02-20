@@ -141,7 +141,7 @@ async function seed(trx: Transaction<DB>) {
       {
         id: id(),
         email: 'student1@cornell.edu',
-        contribution: 'Working on Oyster!',
+        contribution: 'Working on engine!',
         educationLevel: 'undergraduate',
         gender: '',
         goals: '',
@@ -158,7 +158,7 @@ async function seed(trx: Transaction<DB>) {
       {
         id: id(),
         email: 'student2@utexas.edu',
-        contribution: 'Working on Oyster!',
+        contribution: 'Working on engine!',
         educationLevel: 'Bootcamp',
         gender: '',
         goals: '',

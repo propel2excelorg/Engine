@@ -1,9 +1,9 @@
 import { type ActionFunctionArgs, json } from '@remix-run/node';
 
-import { track } from '@oyster/core/mixpanel';
-import { CreateTagInput } from '@oyster/core/resources';
-import { createTag } from '@oyster/core/resources/server';
-import { validateForm } from '@oyster/ui';
+import { track } from '@engine/core/mixpanel';
+import { CreateTagInput } from '@engine/core/resources';
+import { createTag } from '@engine/core/resources/server';
+import { validateForm } from '@engine/ui';
 
 import { ensureUserAuthenticated, user } from '@/shared/session.server';
 

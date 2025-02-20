@@ -12,10 +12,10 @@ import {
 import dayjs from 'dayjs';
 import { DollarSign, MapPin } from 'react-feather';
 
-import { track } from '@oyster/core/mixpanel';
-import { hourlyToMonthlyRate } from '@oyster/core/offers';
-import { db } from '@oyster/db';
-import { Pagination, Table, type TableColumnProps, Text } from '@oyster/ui';
+import { track } from '@engine/core/mixpanel';
+import { hourlyToMonthlyRate } from '@engine/core/offers';
+import { db } from '@engine/db';
+import { Pagination, Table, type TableColumnProps, Text } from '@engine/ui';
 import {
   ClearFiltersButton,
   FilterButton,
@@ -26,7 +26,7 @@ import {
   FilterSearch,
   type FilterValue,
   useFilterContext,
-} from '@oyster/ui/filter';
+} from '@engine/ui/filter';
 
 import { CompanyColumn, CompanyFilter } from '@/shared/components';
 import { OfferAggregation } from '@/shared/components/offer';

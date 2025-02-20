@@ -3,16 +3,16 @@ import { Link, Outlet, useLoaderData } from '@remix-run/react';
 import { Info, Send } from 'react-feather';
 import { match } from 'ts-pattern';
 
-import { ApplicationRejectionReason } from '@oyster/core/applications/types';
-import { listReferrals } from '@oyster/core/referrals';
-import { type ReferralStatus } from '@oyster/core/referrals/ui';
-import { Button, Pill, Text } from '@oyster/ui';
+import { ApplicationRejectionReason } from '@engine/core/applications/types';
+import { listReferrals } from '@engine/core/referrals';
+import { type ReferralStatus } from '@engine/core/referrals/ui';
+import { Button, Pill, Text } from '@engine/ui';
 import {
   Tooltip,
   TooltipContent,
   TooltipText,
   TooltipTrigger,
-} from '@oyster/ui/tooltip';
+} from '@engine/ui/tooltip';
 
 import {
   EmptyState,
@@ -149,7 +149,7 @@ export default function Referrals() {
             <EmptyState icon={<Send />} />
 
             <ProfileDescription>
-              You can refer your friends to join ColorStack! When they apply
+              You can refer your friends to join Propel2Excel! When they apply
               using your referral, they'll have a better chance of getting
               accepted. You'll also earn points for each successful referral!
             </ProfileDescription>

@@ -11,9 +11,9 @@ import {
   useNavigate,
 } from '@remix-run/react';
 
-import { activateMember } from '@oyster/core/admin-dashboard/server';
-import { db } from '@oyster/db';
-import { Button, ErrorMessage, Modal } from '@oyster/ui';
+import { activateMember } from '@engine/core/admin-dashboard/server';
+import { db } from '@engine/db';
+import { Button, ErrorMessage, Modal } from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 import {

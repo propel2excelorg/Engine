@@ -2,9 +2,9 @@ import dayjs from 'dayjs';
 import { type SelectExpression } from 'kysely';
 import { match } from 'ts-pattern';
 
-import { type DB, db, point } from '@oyster/db';
-import { FORMATTED_RACE, Race } from '@oyster/types';
-import { id, run } from '@oyster/utils';
+import { type DB, db, point } from '@engine/db';
+import { FORMATTED_RACE, Race } from '@engine/types';
+import { id, run } from '@engine/utils';
 
 import { job } from '@/infrastructure/bull';
 import { getPresignedURL, putObject } from '@/infrastructure/s3';
@@ -27,7 +27,7 @@ import {
   type SubmitResumeInput,
   type UpdateResumeBookInput,
 } from '@/modules/resume-books/resume-books.types';
-import { ColorStackError } from '@/shared/errors';
+import { Propel2ExcelError } from '@/shared/errors';
 import { success } from '@/shared/utils/core';
 
 // Environment Variables
@@ -708,7 +708,7 @@ export async function submitResume({
 
       return id;
     } catch (e) {
-      throw new ColorStackError()
+      throw new Propel2ExcelError()
         .withMessage('Failed to upload resume to Google Drive.')
         .report();
     }

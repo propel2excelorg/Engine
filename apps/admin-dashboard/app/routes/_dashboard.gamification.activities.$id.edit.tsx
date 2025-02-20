@@ -6,15 +6,15 @@ import {
 } from '@remix-run/node';
 import { useActionData, useLoaderData } from '@remix-run/react';
 
-import { editActivity } from '@oyster/core/gamification';
+import { editActivity } from '@engine/core/gamification';
 import {
   type ActivityPeriod,
   type ActivityType,
   EditActivityInput,
-} from '@oyster/core/gamification/types';
-import { ActivityForm } from '@oyster/core/gamification/ui';
-import { db } from '@oyster/db';
-import { getErrors, Modal, validateForm } from '@oyster/ui';
+} from '@engine/core/gamification/types';
+import { ActivityForm } from '@engine/core/gamification/ui';
+import { db } from '@engine/db';
+import { getErrors, Modal, validateForm } from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 import {

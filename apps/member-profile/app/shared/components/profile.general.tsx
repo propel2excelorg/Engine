@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import { CityCombobox, type CityComboboxProps } from '@oyster/core/location/ui';
-import { Field, type FieldProps, Input, Text } from '@oyster/ui';
+import { CityCombobox, type CityComboboxProps } from '@engine/core/location/ui';
+import { Field, type FieldProps, Input, Text } from '@engine/ui';
 
 export function CurrentLocationField({
   defaultValue,
@@ -14,7 +14,7 @@ export function CurrentLocationField({
 }: FieldProps<string> & Omit<CityComboboxProps, 'required'>) {
   return (
     <Field
-      description="We'll use this to connect you to ColorStack members and events in your area."
+      description="We'll use this to connect you to Propel2Excel members and events in your area."
       error={error}
       labelFor={name}
       label="Current Location"

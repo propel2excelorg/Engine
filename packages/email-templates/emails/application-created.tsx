@@ -17,21 +17,21 @@ export function ApplicationCreatedEmail({
         <Email.Text>Hi {firstName},</Email.Text>
 
         <Email.Text>
-          Thank you so much for applying to join the ColorStack family. We've
+          Thank you so much for applying to join the Propel2Excel family. We've
           received your application and will provide you with an update soon.
         </Email.Text>
 
         <Email.Text>
           In the meantime, be sure to follow us on{' '}
-          <Email.Link href="https://www.instagram.com/colorstackorg">
+          <Email.Link href="https://www.instagram.com/Propel2Excelorg">
             Instagram
           </Email.Link>
           ,{' '}
-          <Email.Link href="https://twitter.com/colorstackorg">
+          <Email.Link href="https://twitter.com/Propel2Excelorg">
             Twitter
           </Email.Link>
           , and{' '}
-          <Email.Link href="https://www.linkedin.com/company/colorstack">
+          <Email.Link href="https://www.linkedin.com/company/Propel2Excel">
             LinkedIn
           </Email.Link>
           !

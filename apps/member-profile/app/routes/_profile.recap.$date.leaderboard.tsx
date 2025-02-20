@@ -1,7 +1,7 @@
 import { json, type LoaderFunctionArgs } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 
-import { getPointsLeaderboard } from '@oyster/core/gamification';
+import { getPointsLeaderboard } from '@engine/core/gamification';
 
 import { getDateRange, Recap } from '@/routes/_profile.recap.$date';
 import { Leaderboard } from '@/shared/components/leaderboard';
@@ -34,7 +34,7 @@ export default function RecapLeaderboard() {
       <Recap.Header>
         <Recap.Title>Leaderboard 🏆</Recap.Title>
         <Recap.Description>
-          The top point earners in the ColorStack Family this week.
+          The top point earners in the Propel2Excel Family this week.
         </Recap.Description>
       </Recap.Header>
 

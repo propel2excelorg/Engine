@@ -1,6 +1,6 @@
 import { type SelectExpression } from 'kysely';
 
-import { db, type DB } from '@oyster/db';
+import { db, type DB } from '@engine/db';
 
 import { type ListSearchParams } from '@/shared/types';
 

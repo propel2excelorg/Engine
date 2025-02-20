@@ -6,10 +6,10 @@ import {
 } from '@remix-run/node';
 import { useActionData } from '@remix-run/react';
 
-import { addAdmin } from '@oyster/core/admins';
-import { AddAdminInput } from '@oyster/core/admins/types';
-import { AdminForm } from '@oyster/core/admins/ui';
-import { getErrors, Modal, validateForm } from '@oyster/ui';
+import { addAdmin } from '@engine/core/admins';
+import { AddAdminInput } from '@engine/core/admins/types';
+import { AdminForm } from '@engine/core/admins/ui';
+import { getErrors, Modal, validateForm } from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 import {

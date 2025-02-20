@@ -10,12 +10,12 @@ import { z } from 'zod';
 import {
   getIcebreakerPrompts,
   upsertIcebreakerResponses,
-} from '@oyster/core/member-profile/server';
+} from '@engine/core/member-profile/server';
 import {
   IcebreakerPrompt,
   IcebreakerResponse,
-} from '@oyster/core/member-profile/ui';
-import { db } from '@oyster/db';
+} from '@engine/core/member-profile/ui';
+import { db } from '@engine/db';
 import {
   Button,
   Field,
@@ -23,8 +23,8 @@ import {
   Select,
   Textarea,
   validateForm,
-} from '@oyster/ui';
-import { id } from '@oyster/utils';
+} from '@engine/ui';
+import { id } from '@engine/utils';
 
 import {
   ProfileHeader,

@@ -9,9 +9,9 @@ import { useState } from 'react';
 import { Camera, Menu, Plus, RefreshCw, Trash2, Upload } from 'react-feather';
 import { generatePath } from 'react-router';
 
-import { ListSearchParams } from '@oyster/core/admin-dashboard/ui';
-import { listEvents } from '@oyster/core/events';
-import { type Event, EventType } from '@oyster/types';
+import { ListSearchParams } from '@engine/core/admin-dashboard/ui';
+import { listEvents } from '@engine/core/events';
+import { type Event, EventType } from '@engine/types';
 import {
   Dashboard,
   Dropdown,
@@ -21,8 +21,8 @@ import {
   Table,
   type TableColumnProps,
   useSearchParams,
-} from '@oyster/ui';
-import { toTitleCase } from '@oyster/utils';
+} from '@engine/ui';
+import { toTitleCase } from '@engine/utils';
 
 import { Route } from '@/shared/constants';
 import { getTimezone } from '@/shared/cookies.server';

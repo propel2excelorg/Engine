@@ -7,9 +7,9 @@ import {
 } from '@remix-run/react';
 import { Briefcase, Plus } from 'react-feather';
 
-import { listWorkExperiences } from '@oyster/core/member-profile/server';
-import { WorkExperienceItem } from '@oyster/core/member-profile/ui';
-import { Button } from '@oyster/ui';
+import { listWorkExperiences } from '@engine/core/member-profile/server';
+import { WorkExperienceItem } from '@engine/core/member-profile/ui';
+import { Button } from '@engine/ui';
 
 import {
   EmptyState,

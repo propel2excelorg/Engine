@@ -1,7 +1,7 @@
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { ColorStackError } from '@/shared/errors';
+import { Propel2ExcelError } from '@/shared/errors';
 
 // Environment Variables
 
@@ -20,13 +20,13 @@ type PullRequest = z.infer<typeof PullRequest>;
 // Core
 
 /**
- * Returns high-level Oyster contributor statistics.
+ * Returns high-level engine contributor statistics.
  *
  * For now, we're only interested in the number of unique contributors for
  * each type of contribution. We can expand this function to include more
  * detailed statistics in the future.
  */
-export async function getOysterContributorStats() {
+export async function getengineContributorStats() {
   const prs = await getMergedPullRequests();
 
   const choreContributors = new Set<string>();
@@ -61,7 +61,7 @@ export async function getOysterContributorStats() {
 }
 
 /**
- * Returns the merged pull requests for the Oyster repository.
+ * Returns the merged pull requests for the engine repository.
  *
  * The GitHub API paginates the results, so we need to follow the `next` link
  * in the response headers to fetch all the pull requests. See documentation
@@ -74,7 +74,7 @@ async function getMergedPullRequests(): Promise<PullRequest[]> {
   const result: PullRequest[] = [];
 
   let uri =
-    'https://api.github.com/repos/colorstackorg/oyster/pulls?state=closed&per_page=100';
+    'https://api.github.com/repos/Propel2Excelorg/engine/pulls?state=closed&per_page=100';
 
   while (uri) {
     const response = await fetch(uri, {
@@ -87,7 +87,7 @@ async function getMergedPullRequests(): Promise<PullRequest[]> {
     const json = await response.json();
 
     if (!response.ok) {
-      throw new ColorStackError()
+      throw new Propel2ExcelError()
         .withMessage('Failed to fetch merged pull requests.')
         .withContext({ response: json })
         .report();

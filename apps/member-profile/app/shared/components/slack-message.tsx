@@ -3,7 +3,7 @@ import React from 'react';
 import parseSlackMessage, { type Node, NodeType } from 'slack-message-parser';
 import { match } from 'ts-pattern';
 
-import { Button, cx, ProfilePicture, Text, type TextProps } from '@oyster/ui';
+import { Button, cx, ProfilePicture, Text, type TextProps } from '@engine/ui';
 
 import { Card } from '@/shared/components/card';
 
@@ -17,13 +17,13 @@ type SlackMessageCardProps = {
   text: string;
 };
 
-const SLACK_WORKSPACE_URL = 'https://colorstack-family.slack.com';
+const SLACK_WORKSPACE_URL = 'https://Propel2Excel-family.slack.com';
 
 export function SlackMessageCard({
   channelId,
   messageId,
   postedAt,
-  posterFirstName = 'ColorStack',
+  posterFirstName = 'Propel2Excel',
   posterLastName = 'Member',
   posterProfilePicture,
   text,

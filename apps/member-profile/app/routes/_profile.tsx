@@ -15,8 +15,8 @@ import {
   User,
 } from 'react-feather';
 
-import { getResumeBook } from '@oyster/core/resume-books';
-import { Dashboard, Divider } from '@oyster/ui';
+import { getResumeBook } from '@engine/core/resume-books';
+import { Dashboard, Divider } from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 import { ensureUserAuthenticated } from '@/shared/session.server';
@@ -46,7 +46,7 @@ export default function ProfileLayout() {
     <Dashboard>
       <Dashboard.Sidebar>
         <div className="mb-8 flex w-full items-center justify-between">
-          <Dashboard.ColorStackLogo />
+          <Dashboard.Propel2ExcelLogo />
           <Dashboard.CloseMenuButton />
         </div>
 

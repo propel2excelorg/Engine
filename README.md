@@ -1,13 +1,13 @@
-<h1 align="center" href="https://github.com/colorstackorg/oyster">
-    <img width="360" src="./apps/member-profile/public/images/colorstack-wordmark.png" />
+<h1 align="center" href="https://github.com/Propel2Excelorg/engine">
+    <img width="360" src="./apps/member-profile/public/images/Propel2Excel-wordmark.png" />
 </h1>
 
-<p align="center"><b>Oyster</b>: The open-source software that powers the ColorStack community experience. ✊🏿✊🏾✊🏽✊🏼</p>
+<p align="center"><b>Engine</b>: The open-source software that powers the Propel2Excel community experience. ✊🏿✊🏾✊🏽✊🏼</p>
 
 <h4 align="center">
-  <a href="https://github.com/colorstackorg/oyster/blob/main/CONTRIBUTING.md">How to Contribute</a> |
-  <a href="https://colorstack.org">Website</a> |
-  <a href="https://app.colorstack.io/apply">Family Application</a>
+  <a href="https://github.com/Propel2Excelorg/engine/blob/main/CONTRIBUTING.md">How to Contribute</a> |
+  <a href="https://Propel2Excel.org">Website</a> |
+  <a href="https://app.Propel2Excel.io/apply">Family Application</a>
 </h4>
 
 <img src="./apps/member-profile/public/images/member-profile-home.png" width="100%" alt="Member Profile" style="border-radius: 8px;" />
@@ -15,10 +15,10 @@
 ## Applications
 
 - [**Member Profile**](./apps/member-profile/package.json) - Serves as the home
-  for a ColorStack member, allowing them to manage their information, find and
+  for a Propel2Excel member, allowing them to manage their information, find and
   connect with other members, as well as events and gamification.
 - [**Admin Dashboard**](./apps/admin-dashboard/package.json) - An internal
-  dashboard that the ColorStack team uses to manage important workflows like
+  dashboard that the Propel2Excel team uses to manage important workflows like
   application review.
 - [**API**](./apps/api/package.json) - Handles all background jobs as well as
   any webhook integrations that we have with external services.
@@ -27,7 +27,7 @@
 
 ### Important Tools & Technologies
 
-Here is a list of important tools and technologies that power the ColorStack
+Here is a list of important tools and technologies that power the Propel2Excel
 codebase:
 
 - [BullMQ](https://docs.bullmq.io) to queue and process jobs asynchronously (in
@@ -108,10 +108,10 @@ list on what we can configure, see
 
 Please see our [contributing guide](./CONTRIBUTING.md)! 👋
 
-A heartfelt thanks to our ColorStack members for their contributions! 🙏
+A heartfelt thanks to our Propel2Excel members for their contributions! 🙏
 
-<a href="https://github.com/colorstackorg/oyster/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=colorstackorg/oyster" />
+<a href="https://github.com/Propel2Excelorg/engine/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Propel2Excelorg/engine" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).

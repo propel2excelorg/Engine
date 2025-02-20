@@ -7,10 +7,10 @@ import {
 } from '@remix-run/node';
 import { Form, useActionData, useLoaderData } from '@remix-run/react';
 
-import { apply } from '@oyster/core/applications';
-import { Application, ApplyInput } from '@oyster/core/applications/ui';
-import { getReferral } from '@oyster/core/referrals';
-import { buildMeta } from '@oyster/core/remix';
+import { apply } from '@engine/core/applications';
+import { Application, ApplyInput } from '@engine/core/applications/ui';
+import { getReferral } from '@engine/core/referrals';
+import { buildMeta } from '@engine/core/remix';
 import {
   Button,
   Checkbox,
@@ -21,7 +21,7 @@ import {
   Text,
   type TextProps,
   validateForm,
-} from '@oyster/ui';
+} from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 import { commitSession, getSession } from '@/shared/session.server';
@@ -30,7 +30,7 @@ export const meta: MetaFunction = () => {
   return buildMeta({
     description: `Apply to join the largest community of Black and Latinx Computer Science college students.`,
     image: '/images/og_apply.jpg',
-    title: 'Apply to ColorStack',
+    title: 'Apply to Propel2Excel',
   });
 };
 
@@ -178,7 +178,7 @@ export default function ApplicationPage() {
         >
           <Checkbox
             id={keys.codeOfConduct}
-            label="I have read, understand and will comply with the ColorStack Code of Conduct."
+            label="I have read, understand and will comply with the Propel2Excel Code of Conduct."
             name={keys.codeOfConduct}
             required
             value="1"
@@ -201,7 +201,7 @@ function CodeOfConductDescription(props: TextProps) {
         href="https://docs.google.com/document/d/10hIOyIJQAdU4ZTvil5ECmRlM34Ds0dPGFNpg18WQ1js"
         target="_blank"
       >
-        ColorStack Code of Conduct
+        Propel2Excel Code of Conduct
       </Link>{' '}
       in full.
     </Text>

@@ -1,7 +1,7 @@
 import { type SelectExpression, sql } from 'kysely';
 
-import { db, type DB } from '@oyster/db';
-import { id } from '@oyster/utils';
+import { db, type DB } from '@engine/db';
+import { id } from '@engine/utils';
 
 import {
   type CreateSchoolInput,

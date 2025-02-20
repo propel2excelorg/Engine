@@ -4,9 +4,9 @@ import { generatePath, Link, useLoaderData } from '@remix-run/react';
 import {
   countEventAttendees,
   listEventAttendees,
-} from '@oyster/core/events/attendees';
-import { type Student } from '@oyster/types';
-import { Modal, ProfilePicture } from '@oyster/ui';
+} from '@engine/core/events/attendees';
+import { type Student } from '@engine/types';
+import { Modal, ProfilePicture } from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 

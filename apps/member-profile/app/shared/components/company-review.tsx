@@ -15,7 +15,7 @@ import {
   FORMATTED_EMPLOYMENT_TYPE,
   FORMATTED_LOCATION_TYPE,
   type LocationType,
-} from '@oyster/core/employment';
+} from '@engine/core/employment';
 import {
   cx,
   getIconButtonCn,
@@ -23,13 +23,13 @@ import {
   Pill,
   ProfilePicture,
   Text,
-} from '@oyster/ui';
+} from '@engine/ui';
 import {
   Tooltip,
   TooltipContent,
   TooltipText,
   TooltipTrigger,
-} from '@oyster/ui/tooltip';
+} from '@engine/ui/tooltip';
 
 import { Card } from '@/shared/components/card';
 import { Route } from '@/shared/constants';

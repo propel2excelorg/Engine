@@ -9,9 +9,9 @@ import dayjs from 'dayjs';
 import { emojify } from 'node-emoji';
 import { Edit } from 'react-feather';
 
-import { track } from '@oyster/core/mixpanel';
-import { getOpportunityDetails } from '@oyster/core/opportunities';
-import { getIconButtonCn, Modal, Pill, Text } from '@oyster/ui';
+import { track } from '@engine/core/mixpanel';
+import { getOpportunityDetails } from '@engine/core/opportunities';
+import { getIconButtonCn, Modal, Pill, Text } from '@engine/ui';
 
 import {
   BookmarkButton,

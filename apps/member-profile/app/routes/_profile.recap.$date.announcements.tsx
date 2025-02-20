@@ -3,7 +3,7 @@ import { useLoaderData } from '@remix-run/react';
 import dayjs from 'dayjs';
 import { emojify } from 'node-emoji';
 
-import { listSlackMessages } from '@oyster/core/slack/server';
+import { listSlackMessages } from '@engine/core/slack/server';
 
 import { getDateRange, Recap } from '@/routes/_profile.recap.$date';
 import { SlackMessageCard } from '@/shared/components/slack-message';
@@ -47,7 +47,7 @@ export default function RecapAnnouncements() {
       <Recap.Header>
         <Recap.Title>Announcements 📣 ({announcements.length})</Recap.Title>
         <Recap.Description>
-          Announcements from the ColorStack team this week in Slack.
+          Announcements from the Propel2Excel team this week in Slack.
         </Recap.Description>
       </Recap.Header>
 

@@ -14,8 +14,8 @@ import {
 } from 'react-feather';
 import { generatePath } from 'react-router';
 
-import { listPastEvents, listUpcomingEvents } from '@oyster/core/events';
-import { Button, Dashboard, ProfilePicture, Text } from '@oyster/ui';
+import { listPastEvents, listUpcomingEvents } from '@engine/core/events';
+import { Button, Dashboard, ProfilePicture, Text } from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 import { getTimezone } from '@/shared/cookies.server';
@@ -222,7 +222,7 @@ function PastEventItem({
 
 function EventBackground() {
   return (
-    <div className="h-24 w-full rounded-[inherit] bg-[url(/images/colorstack-background.png)] bg-contain" />
+    <div className="h-24 w-full rounded-[inherit] bg-[url(/images/Propel2Excel-background.png)] bg-contain" />
   );
 }
 

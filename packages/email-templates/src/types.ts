@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { Application, Email, Student } from '@oyster/types';
+import { Application, Email, Student } from '@engine/types';
 
 const BaseEmail = z.object({
   to: Email,
@@ -68,7 +68,7 @@ export const EmailTemplate = z.discriminatedUnion('name', [
     name: z.literal('student-anniversary'),
     data: z.object({
       firstName: z.string().trim().min(1),
-      years: z.number().int().positive(), // Years in ColorStack
+      years: z.number().int().positive(), // Years in Propel2Excel
     }),
   }),
   BaseEmail.extend({

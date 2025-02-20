@@ -1,7 +1,7 @@
 import { redis } from '@/infrastructure/redis';
 import { OAuthTokenResponse } from '@/modules/authentication/oauth.service';
 import { API_URL, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } from '@/shared/env';
-import { ColorStackError } from '@/shared/errors';
+import { Propel2ExcelError } from '@/shared/errors';
 import { validate } from '@/shared/utils/zod';
 
 // Core
@@ -51,7 +51,7 @@ export async function createGoogleDriveFolder({
   const json = await response.json();
 
   if (!response.ok) {
-    throw new ColorStackError()
+    throw new Propel2ExcelError()
       .withMessage('Failed to create a Google Drive folder.')
       .withContext({ folderId, name, response: json })
       .report();
@@ -135,7 +135,7 @@ export async function uploadFileToGoogleDrive({
   const json = await response.json();
 
   if (!response.ok) {
-    throw new ColorStackError()
+    throw new Propel2ExcelError()
       .withMessage('Failed to upload file to Google Drive.')
       .withContext({ fileId, metadata, response: json })
       .report();
@@ -176,7 +176,7 @@ export async function saveGoogleDriveCredentials(code: string) {
   const json = await response.json();
 
   if (!response.ok) {
-    throw new ColorStackError()
+    throw new Propel2ExcelError()
       .withMessage('Failed to exchange code for Google Drive credentials.')
       .withContext(json);
   }
@@ -208,7 +208,7 @@ async function retrieveAccessToken() {
     ]);
 
   if (!refreshToken) {
-    throw new ColorStackError().withMessage(
+    throw new Propel2ExcelError().withMessage(
       'Failed to find the Google Drive refresh token in Redis.'
     );
   }
@@ -253,7 +253,7 @@ async function refreshCredentials(refreshToken: string) {
   const json = await response.json();
 
   if (!response.ok) {
-    throw new ColorStackError()
+    throw new Propel2ExcelError()
       .withMessage('Failed to refresh Google Drive credentials.')
       .withContext(json)
       .report();

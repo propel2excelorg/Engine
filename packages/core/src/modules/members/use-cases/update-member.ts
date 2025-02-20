@@ -1,7 +1,7 @@
 import { type Transaction, type UpdateObject } from 'kysely';
 
-import { type DB, db, point } from '@oyster/db';
-import { type Student } from '@oyster/types';
+import { type DB, db, point } from '@engine/db';
+import { type Student } from '@engine/types';
 
 type UpdateMemberOptions = {
   data: Omit<

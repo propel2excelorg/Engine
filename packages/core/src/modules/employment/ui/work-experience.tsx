@@ -2,14 +2,14 @@ import { Link } from '@remix-run/react';
 import { useState } from 'react';
 import { Check, Edit, MoreVertical, Plus } from 'react-feather';
 
-import { Dropdown, IconButton, Text } from '@oyster/ui';
+import { Dropdown, IconButton, Text } from '@engine/ui';
 import {
   Tooltip,
   TooltipContent,
   TooltipText,
   TooltipTrigger,
-} from '@oyster/ui/tooltip';
-import { toTitleCase } from '@oyster/utils';
+} from '@engine/ui/tooltip';
+import { toTitleCase } from '@engine/utils';
 
 type WorkExperienceMenuProps = {
   editTo: string;

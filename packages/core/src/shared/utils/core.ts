@@ -1,4 +1,4 @@
-import { sleep } from '@oyster/utils';
+import { sleep } from '@engine/utils';
 
 export type Result<T = object> =
   | {

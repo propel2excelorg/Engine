@@ -10,9 +10,9 @@ import {
 } from '@remix-run/react';
 import { withSentry } from '@sentry/remix';
 
-import { buildMeta } from '@oyster/core/remix';
-import { Toast } from '@oyster/ui';
-import uiStylesheet from '@oyster/ui/index.css?url';
+import { buildMeta } from '@engine/core/remix';
+import { Toast } from '@engine/ui';
+import uiStylesheet from '@engine/ui/index.css?url';
 
 import { ENV } from '@/shared/constants.server';
 import { commitSession, getSession, SESSION } from '@/shared/session.server';
@@ -27,7 +27,7 @@ export const links: LinksFunction = () => {
 
 export const meta: MetaFunction = () => {
   return buildMeta({
-    description: `Your home for all things ColorStack membership. Manage your profile and more!`,
+    description: `Your home for all things Propel2Excel membership. Manage your profile and more!`,
     title: 'Member Profile',
   });
 };

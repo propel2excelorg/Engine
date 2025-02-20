@@ -6,7 +6,7 @@ import {
   loginWithOAuth,
   OAuthCodeState,
   saveGoogleDriveCredentials,
-} from '@oyster/core/api';
+} from '@engine/core/api';
 
 export const oauthRouter = express.Router();
 

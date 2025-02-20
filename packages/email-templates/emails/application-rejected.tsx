@@ -25,7 +25,7 @@ export function ApplicationRejectedEmail({
 
         <Email.Text>
           If you are interested in attending any of our public events, please
-          feel free to check out our social media (@colorstackorg) for the most
+          feel free to check out our social media (@Propel2Excelorg) for the most
           up to date information. Good luck in all of your future endeavors.
         </Email.Text>
 

@@ -15,8 +15,8 @@ import { sql } from 'kysely';
 import { jsonBuildObject } from 'kysely/helpers/postgres';
 import { Bookmark, Calendar, Circle, Tag, Zap } from 'react-feather';
 
-import { track } from '@oyster/core/mixpanel';
-import { db } from '@oyster/db';
+import { track } from '@engine/core/mixpanel';
+import { db } from '@engine/db';
 import {
   type AccentColor,
   Button,
@@ -27,7 +27,7 @@ import {
   Table,
   type TableColumnProps,
   Text,
-} from '@oyster/ui';
+} from '@engine/ui';
 import {
   ClearFiltersButton,
   FilterButton,
@@ -38,13 +38,13 @@ import {
   FilterSearch,
   type FilterValue,
   useFilterContext,
-} from '@oyster/ui/filter';
+} from '@engine/ui/filter';
 import {
   Tooltip,
   TooltipContent,
   TooltipText,
   TooltipTrigger,
-} from '@oyster/ui/tooltip';
+} from '@engine/ui/tooltip';
 
 import {
   BookmarkButton,

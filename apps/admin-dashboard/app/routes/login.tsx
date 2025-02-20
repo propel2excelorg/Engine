@@ -1,7 +1,7 @@
 import { json, type LoaderFunctionArgs, redirect } from '@remix-run/node';
 import { Outlet } from '@remix-run/react';
 
-import { Login, Public } from '@oyster/ui';
+import { Login, Public } from '@engine/ui';
 
 import { Route } from '@/shared/constants';
 import { getAuthenticationStatus, getSession } from '@/shared/session.server';
@@ -22,7 +22,7 @@ export default function LoginLayout() {
   return (
     <Public.Layout>
       <Public.Content>
-        <Login.Title>ColorStack Admin Dashboard</Login.Title>
+        <Login.Title>Propel2Excel Admin Dashboard</Login.Title>
         <Outlet />
       </Public.Content>
     </Public.Layout>

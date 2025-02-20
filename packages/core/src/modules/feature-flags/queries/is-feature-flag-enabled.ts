@@ -1,4 +1,4 @@
-import { db } from '@oyster/db';
+import { db } from '@engine/db';
 
 import { type FeatureFlagName } from '../feature-flags.types';
 

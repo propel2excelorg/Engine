@@ -6,7 +6,7 @@ import { Star } from 'react-feather';
 import {
   AddCompanyReviewInput,
   type EditCompanyReviewInput,
-} from '@oyster/core/employment';
+} from '@engine/core/employment';
 import {
   Button,
   Checkbox,
@@ -19,7 +19,7 @@ import {
   Select,
   Text,
   Textarea,
-} from '@oyster/ui';
+} from '@engine/ui';
 
 import { type GetWorkExperiencesResult } from '@/routes/api.me.work-experiences';
 import { Route } from '@/shared/constants';
@@ -225,7 +225,7 @@ function RecommendField({ defaultValue, error, name }: FieldProps<boolean>) {
   return (
     <Field
       error={error}
-      label="Would you recommend this company to another ColorStack member?"
+      label="Would you recommend this company to another Propel2Excel member?"
       labelFor={name}
       required
     >

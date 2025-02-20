@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { Edit, Menu, Plus, Trash } from 'react-feather';
 import { generatePath } from 'react-router';
 
-import { listActivities } from '@oyster/core/gamification';
+import { listActivities } from '@engine/core/gamification';
 import {
   Dashboard,
   Dropdown,
@@ -16,8 +16,8 @@ import {
   Pill,
   Table,
   type TableColumnProps,
-} from '@oyster/ui';
-import { toTitleCase } from '@oyster/utils';
+} from '@engine/ui';
+import { toTitleCase } from '@engine/utils';
 
 import { Route } from '@/shared/constants';
 import { ensureUserAuthenticated } from '@/shared/session.server';

@@ -11,11 +11,11 @@ import {
 import { Form, useActionData, useLoaderData } from '@remix-run/react';
 import { z } from 'zod';
 
-import { parseCsv } from '@oyster/core/admin-dashboard/server';
-import { job } from '@oyster/core/bull';
-import { getEvent } from '@oyster/core/events';
-import { db } from '@oyster/db';
-import { Email, EventAttendee } from '@oyster/types';
+import { parseCsv } from '@engine/core/admin-dashboard/server';
+import { job } from '@engine/core/bull';
+import { getEvent } from '@engine/core/events';
+import { db } from '@engine/db';
+import { Email, EventAttendee } from '@engine/types';
 import {
   Button,
   ErrorMessage,
@@ -24,8 +24,8 @@ import {
   getErrors,
   Modal,
   validateForm,
-} from '@oyster/ui';
-import { id } from '@oyster/utils';
+} from '@engine/ui';
+import { id } from '@engine/utils';
 
 import { Route } from '@/shared/constants';
 import { findStudentByEmail } from '@/shared/queries/student';

@@ -4,9 +4,9 @@ import { sql } from 'kysely';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { db } from '@oyster/db';
-import { Student } from '@oyster/types';
-import { id } from '@oyster/utils';
+import { db } from '@engine/db';
+import { Student } from '@engine/types';
+import { id } from '@engine/utils';
 
 import { job, registerWorker } from '@/infrastructure/bull';
 import {
@@ -452,7 +452,7 @@ async function queueSlackNotification({
 
   job('notification.slack.send', {
     channel: slackId,
-    message: `You were just awarded *${points} points*! Check your <https://app.colorstack.io/points|*activity history*> to see why! 🎉`,
+    message: `You were just awarded *${points} points*! Check your <https://app.Propel2Excel.io/points|*activity history*> to see why! 🎉`,
     workspace: 'regular',
   });
 }

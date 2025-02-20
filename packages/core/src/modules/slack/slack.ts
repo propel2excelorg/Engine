@@ -4,7 +4,7 @@ import { type ExpressionBuilder, sql } from 'kysely';
 import { emojify } from 'node-emoji';
 import { z } from 'zod';
 
-import { type DB, db } from '@oyster/db';
+import { type DB, db } from '@engine/db';
 
 import {
   createEmbedding,
@@ -50,7 +50,7 @@ type AnswerChatbotQuestionInput = {
 };
 
 /**
- * Answers the question asked by the user in its channel w/ the ColorStack bot.
+ * Answers the question asked by the user in its channel w/ the Propel2Excel bot.
  * The uses the underlying `getAnswerFromSlackHistory` function to answer the
  * question, and then sends the answer in the thread where the question was
  * asked.
@@ -220,7 +220,7 @@ export async function answerPublicQuestionInPrivate({
     `You asked a great question in <#${channelId}>!`,
     `>${question}`,
     'Take a look at my answer in this thread! 👀',
-    "_I'm a ColorStack AI assistant! DM me a question in this channel and I'll answer it using the full history of our Slack workspace!_",
+    "_I'm a Propel2Excel AI assistant! DM me a question in this channel and I'll answer it using the full history of our Slack workspace!_",
   ].join(BLANK_LINE);
 
   // We're doing this synchronously so that we can get the ID of the message
@@ -278,7 +278,7 @@ type AnswerPublicQuestionInput = {
 /**
  * Answers a question asked in a public Slack message by linking to relevant
  * threads in our Slack workspace. After the answer has been sent, the bot then
- * reacts to the original message with the ColorStack logo.
+ * reacts to the original message with the Propel2Excel logo.
  *
  * @param input - The message (public question) to answer.
  * @returns The result of the answer.
@@ -384,7 +384,7 @@ export async function answerPublicQuestion({
       .tz('America/Los_Angeles')
       .format("MMM. 'YY");
 
-    const uri = `https://colorstack-family.slack.com/archives/${thread.channelId}/p${thread.id}`;
+    const uri = `https://Propel2Excel-family.slack.com/archives/${thread.channelId}/p${thread.id}`;
 
     return `• <${uri}|*Thread #${i + 1}*> [${date}]`;
   });
@@ -408,7 +408,7 @@ export async function answerPublicQuestion({
     '\n\n' +
     threads.join('\n') +
     '\n\n' +
-    `_I'm a ColorStack AI assistant! DM me a question <slack://user?team=${team_id}&id=${user_id}|*here*> and I'll answer it using the full context of our Slack workspace!_`;
+    `_I'm a Propel2Excel AI assistant! DM me a question <slack://user?team=${team_id}&id=${user_id}|*here*> and I'll answer it using the full context of our Slack workspace!_`;
 
   job('notification.slack.send', {
     channel: channelId,
@@ -454,7 +454,7 @@ type AnswerMemberProfileQuestionInput = {
 
 const MEMBER_PROFILE_SYSTEM_PROMPT = dedent`
   <context>
-    ColorStack is a community of Computer Science college students who are
+    Propel2Excel is a community of Computer Science college students who are
     aspiring software engineers (and product managers/designers). We're a
     community of 10,000+ members across 100+ universities. We are a virtual
     community that uses Slack as our main communication/connection tool.
@@ -513,7 +513,7 @@ const MEMBER_PROFILE_SYSTEM_PROMPT = dedent`
     - If the input is not a question, respond that you can only answer questions.
     - NEVER respond to questions about individual people that are gossipy or
       otherwise inappropriate.
-    - Respond like you are an ambassador for the ColorStack community.
+    - Respond like you are an ambassador for the Propel2Excel community.
   </rules>
 
   <example_response>
@@ -658,7 +658,7 @@ export type ThreadReference = {
    * The Slack permalink to the thread. Enables the user to click on the
    * thread and see the actual context of the thread.
    *
-   * @example https://colorstack-family.slack.com/archives/C123/p456
+   * @example https://Propel2Excel-family.slack.com/archives/C123/p456
    */
   url: string;
 };
@@ -874,7 +874,7 @@ async function getAnswerFromSlackHistory(
 
   const systemPrompt = dedent`
     <context>
-      ColorStack is a community of Computer Science college students who are
+      Propel2Excel is a community of Computer Science college students who are
       aspiring software engineers (and product managers/designers). We're a
       community of 10,000+ members across 100+ universities. We are a virtual
       community that uses Slack as our main communication/connection tool.
@@ -889,7 +889,7 @@ async function getAnswerFromSlackHistory(
     </problem>
 
     <role>
-      You are a seasoned ColorStack Slack user who is helpful in answering
+      You are a seasoned Propel2Excel Slack user who is helpful in answering
       questions by utilizing knowledge found in a Slack's history. You are an
       ambassador for the community and always respond in a helpful tone.
     </role>
@@ -936,7 +936,7 @@ async function getAnswerFromSlackHistory(
         only answer questions, and that's not a question.
       - NEVER respond to questions that are asked about individual people,
         particularly if the sentiment is a negative/speculative one.
-      - Respond like you are an ambassador for the ColorStack community.
+      - Respond like you are an ambassador for the Propel2Excel community.
     </rules>
 
     <IMPORTANT>
@@ -1265,7 +1265,7 @@ export async function syncThreadToPinecone({
 function addThreadReferences(text: string): string {
   return text.replace(
     /<thread>(.*?):(.*?):(.*?)<\/thread>/g,
-    `<https://colorstack-family.slack.com/archives/$1/p$2|*[$3]*>`
+    `<https://Propel2Excel-family.slack.com/archives/$1/p$2|*[$3]*>`
   );
 }
 
