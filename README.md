@@ -1,5 +1,5 @@
-er<h1 align="center" href="https://github.com/Propel2Excelorg/engine">
-    <img width="536" src="./apps/member-profile/public/images/propel2excel-wordmark.png" />
+<h1 align="center" href="https://github.com/Propel2Excelorg/engine">
+    <img width="536" src="./apps/member-profile/public/images/Header.png" />
 </h1>
 
 <p align="center"><b>Engine</b>: The open-source software that powers the Propel2Excel community experience. ✊🏿✊🏾✊🏽✊🏼</p>
