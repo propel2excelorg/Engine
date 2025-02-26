@@ -7,7 +7,7 @@
 <h4 align="center">
   <a href="https://github.com/Propel2Excelorg/engine/blob/main/CONTRIBUTING.md">How to Contribute</a> |
   <a href="https://Propel2Excel.org">Website</a> |
-  <a href="https://app.Propel2Excel.io/apply">Family Application</a>
+  <a href="https://www.propel2excel.org/fellows">Family Application</a>
 </h4>
 
 <img src="./apps/member-profile/public/images/member-profile-home.png" width="100%" alt="Member Profile" style="border-radius: 8px;" />
